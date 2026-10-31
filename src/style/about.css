@@ -1,0 +1,1019 @@
+/* =========================================================
+   CRYSTAL THAI SPA
+   PREMIUM LIGHT LUXURY ABOUT PAGE
+   BRAND COLORS MATCHED TO LOGO
+========================================================= */
+
+:root {
+  /* ==============================
+     BRAND COLORS
+  ============================== */
+
+  --crystal-ivory: #f8f7f2;
+  --crystal-cream: #f3f0e7;
+  --crystal-white: #ffffff;
+
+  --crystal-aqua: #70c5c2;
+  --crystal-aqua-dark: #438f8c;
+  --crystal-aqua-light: #dff2f0;
+  --crystal-aqua-soft: #edf8f6;
+
+  --crystal-gold: #c9a04a;
+  --crystal-gold-light: #e5c875;
+  --crystal-gold-dark: #9b752b;
+  --crystal-champagne: #f1dfaa;
+
+  --crystal-charcoal: #242629;
+  --crystal-dark: #17191b;
+  --crystal-text: #3f4243;
+  --crystal-muted: #777b7b;
+
+  --crystal-border: rgba(201, 160, 74, 0.22);
+  --crystal-aqua-border: rgba(112, 197, 194, 0.28);
+
+  /* ==============================
+     SHADOWS
+  ============================== */
+
+  --crystal-shadow:
+    0 25px 70px rgba(32, 43, 43, 0.10);
+
+  --crystal-shadow-soft:
+    0 12px 35px rgba(32, 43, 43, 0.08);
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.about-page {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 90% 5%,
+      rgba(112, 197, 194, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 5% 80%,
+      rgba(201, 160, 74, 0.08),
+      transparent 30%
+    ),
+    var(--crystal-ivory);
+
+  color: var(--crystal-text);
+}
+
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+========================================================= */
+
+.about-page::before {
+  content: "";
+
+  position: absolute;
+
+  top: -220px;
+  right: -220px;
+
+  width: 600px;
+  height: 600px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(112, 197, 194, 0.16);
+
+  box-shadow:
+    0 0 0 30px rgba(112, 197, 194, 0.025),
+    0 0 0 60px rgba(112, 197, 194, 0.018);
+
+  pointer-events: none;
+}
+
+
+.about-page::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -260px;
+  left: -230px;
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201, 160, 74, 0.07),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN ABOUT SECTION
+========================================================= */
+
+.about-simple {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1320px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding:
+    150px
+    0
+    120px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 0.9fr);
+
+  gap: clamp(55px, 7vw, 110px);
+
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   IMAGE AREA
+========================================================= */
+
+.about-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 570px;
+
+  overflow: visible;
+
+  background: var(--crystal-white);
+
+  border-radius: 4px;
+
+  box-shadow: var(--crystal-shadow);
+}
+
+
+/* =========================================================
+   IMAGE GOLD FRAME
+========================================================= */
+
+.about-image::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 3;
+
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+
+  border:
+    1px solid
+    rgba(201, 160, 74, 0.75);
+
+  pointer-events: none;
+
+  transition:
+    top 0.45s ease,
+    left 0.45s ease,
+    right 0.45s ease,
+    bottom 0.45s ease;
+}
+
+
+/* =========================================================
+   AQUA IMAGE FRAME
+========================================================= */
+
+.about-image::after {
+  content: "";
+
+  position: absolute;
+
+  z-index: -1;
+
+  top: 28px;
+  left: -14px;
+
+  width: 100%;
+  height: 100%;
+
+  border:
+    1px solid
+    rgba(112, 197, 194, 0.45);
+
+  border-radius: 4px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.about-image img {
+  display: block;
+
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: top;
+
+  border-radius: 4px;
+
+  transition:
+    transform 0.8s
+    cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.about-image img {
+  filter:
+    saturate(0.94)
+    contrast(1.02);
+}
+
+
+.about-image:hover img {
+  transform: scale(1.035);
+}
+
+
+.about-image:hover::before {
+  top: 11px;
+  left: 11px;
+  right: 11px;
+  bottom: 11px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-content {
+  position: relative;
+
+  max-width: 590px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.about-eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 0 0 18px;
+
+  color: var(--crystal-aqua-dark);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+
+.about-eyebrow::before {
+  content: "";
+
+  width: 42px;
+
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--crystal-gold-dark),
+      var(--crystal-gold)
+    );
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.about-content h1 {
+  margin: 0 0 24px;
+
+  color: var(--crystal-charcoal);
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(42px, 4.5vw, 64px);
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.8px;
+}
+
+
+/* =========================================================
+   HEADING ACCENT
+========================================================= */
+
+.about-content h1 span {
+  color: var(--crystal-gold);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-gold-dark),
+      var(--crystal-gold),
+      var(--crystal-gold-light)
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.about-description {
+  max-width: 560px;
+
+  margin: 0;
+
+  color: var(--crystal-muted);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.95;
+}
+
+
+/* =========================================================
+   DECORATIVE LINE
+========================================================= */
+
+.about-content::after {
+  content: "";
+
+  display: block;
+
+  width: 95px;
+
+  height: 2px;
+
+  margin-top: 28px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--crystal-gold),
+      var(--crystal-aqua),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.about-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  margin-top: 34px;
+
+  background:
+    rgba(255, 255, 255, 0.65);
+
+  border-top:
+    1px solid
+    var(--crystal-border);
+
+  border-bottom:
+    1px solid
+    var(--crystal-border);
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   STAT
+========================================================= */
+
+.about-stat {
+  padding:
+    22px
+    12px;
+
+  text-align: center;
+
+  border-right:
+    1px solid
+    var(--crystal-border);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.about-stat:last-child {
+  border-right: none;
+}
+
+
+.about-stat:hover {
+  background:
+    var(--crystal-aqua-soft);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   STAT NUMBER
+========================================================= */
+
+.about-stat strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 31px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-gold-dark),
+      var(--crystal-gold),
+      var(--crystal-gold-light)
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================================
+   STAT LABEL
+========================================================= */
+
+.about-stat span {
+  display: block;
+
+  color: var(--crystal-muted);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  letter-spacing: 1.3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PHONE BUTTON
+========================================================= */
+
+.about-phone {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 30px;
+
+  padding: 8px 20px 8px 8px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-aqua-dark),
+      var(--crystal-aqua)
+    );
+
+  border:
+    1px solid
+    var(--crystal-aqua-dark);
+
+  border-radius: 3px;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 12px 28px
+    rgba(67, 143, 140, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.about-phone:hover {
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-gold-dark),
+      var(--crystal-gold)
+    );
+
+  border-color:
+    var(--crystal-gold-dark);
+
+  box-shadow:
+    0 16px 35px
+    rgba(201, 160, 74, 0.22);
+}
+
+
+/* =========================================================
+   PHONE ICON
+========================================================= */
+
+.about-phone-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: var(--crystal-charcoal);
+
+  background:
+    rgba(255, 255, 255, 0.88);
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   PHONE TEXT
+========================================================= */
+
+.about-phone-text {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.about-phone-text small {
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(255, 255, 255, 0.78);
+}
+
+
+.about-phone-text strong {
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .about-simple {
+    width: calc(100% - 60px);
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    gap: 45px;
+
+    padding:
+      135px
+      0
+      90px;
+  }
+
+
+  .about-image {
+    height: 500px;
+  }
+
+
+  .about-content h1 {
+    font-size:
+      clamp(40px, 5vw, 54px);
+  }
+
+
+  .about-description {
+    font-size: 13.5px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .about-simple {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    padding:
+      120px
+      0
+      85px;
+  }
+
+
+  .about-image {
+    height: 480px;
+
+    max-width: 760px;
+  }
+
+
+  .about-content {
+    max-width: 720px;
+  }
+
+
+  .about-description {
+    max-width: 700px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .about-simple {
+    width: calc(100% - 40px);
+
+    padding:
+      105px
+      0
+      65px;
+
+    gap: 40px;
+  }
+
+
+  /* ============================
+     IMAGE
+  ============================ */
+
+  .about-image {
+    height: 370px;
+  }
+
+
+  .about-image::before {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+
+  .about-image::after {
+    top: 18px;
+    left: -8px;
+  }
+
+
+  /* ============================
+     EYEBROW
+  ============================ */
+
+  .about-eyebrow {
+    gap: 9px;
+
+    margin-bottom: 14px;
+
+    font-size: 8.5px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .about-eyebrow::before {
+    width: 25px;
+  }
+
+
+  /* ============================
+     HEADING
+  ============================ */
+
+  .about-content h1 {
+    margin-bottom: 18px;
+
+    font-size: 38px;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.3px;
+  }
+
+
+  /* ============================
+     DESCRIPTION
+  ============================ */
+
+  .about-description {
+    font-size: 13.5px;
+
+    line-height: 1.85;
+  }
+
+
+  /* ============================
+     DECORATIVE LINE
+  ============================ */
+
+  .about-content::after {
+    width: 75px;
+
+    margin-top: 22px;
+  }
+
+
+  /* ============================
+     STATS
+  ============================ */
+
+  .about-stats {
+    margin-top: 27px;
+  }
+
+
+  .about-stat {
+    padding:
+      18px
+      5px;
+  }
+
+
+  .about-stat strong {
+    font-size: 24px;
+  }
+
+
+  .about-stat span {
+    font-size: 8px;
+
+    letter-spacing: 0.6px;
+  }
+
+
+  /* ============================
+     PHONE
+  ============================ */
+
+  .about-phone {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    justify-content: flex-start;
+
+    margin-top: 24px;
+
+    padding:
+      8px
+      15px
+      8px
+      8px;
+  }
+
+
+  .about-phone-icon {
+    width: 36px;
+
+    height: 36px;
+  }
+
+
+  .about-phone-text strong {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .about-simple {
+    width: calc(100% - 32px);
+
+    padding:
+      95px
+      0
+      55px;
+
+    gap: 30px;
+  }
+
+
+  .about-image {
+    height: 320px;
+  }
+
+
+  .about-content h1 {
+    font-size: 34px;
+  }
+
+
+  .about-description {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+
+  .about-stat {
+    padding:
+      16px
+      3px;
+  }
+
+
+  .about-stat strong {
+    font-size: 22px;
+  }
+
+
+  .about-stat span {
+    font-size: 7.5px;
+
+    letter-spacing: 0.35px;
+  }
+
+
+  .about-phone {
+    padding:
+      8px
+      12px
+      8px
+      8px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-image img,
+  .about-stat,
+  .about-phone {
+    transition: none;
+  }
+}

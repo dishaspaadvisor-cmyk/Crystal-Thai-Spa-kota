@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crystalthaispakota.best-spa.in/sitemap.xml

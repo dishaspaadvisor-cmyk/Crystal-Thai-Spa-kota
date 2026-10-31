@@ -1,0 +1,1239 @@
+/* =========================================================
+   CRYSTAL THAI SPA
+   PREMIUM FAQ SECTION
+   LIGHT AQUA • IVORY • CHAMPAGNE GOLD
+========================================================= */
+
+:root {
+  --crystal-ivory: #f8f7f2;
+  --crystal-cream: #f1eee5;
+  --crystal-white: #ffffff;
+
+  --crystal-aqua: #70c5c2;
+  --crystal-aqua-dark: #438f8c;
+  --crystal-aqua-deep: #2f7472;
+  --crystal-aqua-light: #dff3f1;
+  --crystal-aqua-soft: #edf8f7;
+
+  --crystal-gold: #c9a04a;
+  --crystal-gold-light: #e5ca83;
+  --crystal-gold-dark: #9b752b;
+  --crystal-champagne: #f0dfad;
+
+  --crystal-charcoal: #25282a;
+  --crystal-text: #424747;
+  --crystal-muted: #777d7d;
+
+  --crystal-border: rgba(201, 160, 74, 0.24);
+  --crystal-aqua-border: rgba(112, 197, 194, 0.28);
+
+  --crystal-shadow:
+    0 25px 70px rgba(42, 63, 63, 0.10);
+
+  --crystal-shadow-hover:
+    0 30px 80px rgba(42, 63, 63, 0.16);
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.crystal-faq-section {
+  position: relative;
+  overflow: hidden;
+
+  padding: 120px 0;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(112, 197, 194, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(201, 160, 74, 0.10),
+      transparent 28%
+    ),
+    var(--crystal-ivory);
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND ORBS
+========================================================= */
+
+.crystal-faq-bg-orb {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(1px);
+
+  z-index: -1;
+}
+
+.crystal-faq-bg-orb-one {
+  width: 420px;
+  height: 420px;
+
+  top: -220px;
+  left: -180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(112, 197, 194, 0.13),
+      transparent 68%
+    );
+}
+
+.crystal-faq-bg-orb-two {
+  width: 480px;
+  height: 480px;
+
+  right: -260px;
+  bottom: -260px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201, 160, 74, 0.12),
+      transparent 68%
+    );
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.crystal-faq-container {
+  width: min(1200px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  gap: 85px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   VISUAL SIDE
+========================================================= */
+
+.crystal-faq-visual {
+  position: relative;
+
+  padding: 20px 20px 55px 0;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.crystal-faq-image-wrap {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 590px;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.crystal-faq-image {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 590px;
+
+  object-fit: cover;
+
+  border-radius: 4px;
+
+  z-index: 2;
+
+  box-shadow:
+    0 30px 75px rgba(37, 48, 48, 0.17);
+
+  transition:
+    transform 0.7s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    ),
+    box-shadow 0.5s ease;
+}
+
+.crystal-faq-image-wrap:hover
+.crystal-faq-image {
+  transform: scale(1.015);
+
+  box-shadow:
+    0 38px 90px rgba(37, 48, 48, 0.21);
+}
+
+
+/* =========================================================
+   IMAGE FRAME
+========================================================= */
+
+.crystal-faq-image-frame {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid var(--crystal-gold);
+
+  z-index: 1;
+
+  opacity: 0.65;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE AQUA FRAME
+========================================================= */
+
+.crystal-faq-image-frame::after {
+  content: "";
+
+  position: absolute;
+
+  top: 16px;
+  left: 16px;
+
+  right: -1px;
+  bottom: -1px;
+
+  border: 1px solid
+    var(--crystal-aqua-border);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.crystal-faq-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(19, 57, 56, 0.22) 100%
+    );
+
+  border-radius: 4px;
+}
+
+
+/* =========================================================
+   IMAGE BADGE
+========================================================= */
+
+.crystal-faq-image-badge {
+  position: absolute;
+
+  left: 25px;
+  bottom: 25px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 11px 17px;
+
+  color: var(--crystal-white);
+
+  background:
+    rgba(40, 94, 92, 0.88);
+
+  border:
+    1px solid
+    rgba(229, 202, 131, 0.55);
+
+  backdrop-filter: blur(12px);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.6px;
+}
+
+.crystal-faq-image-badge svg {
+  color: var(--crystal-gold-light);
+}
+
+
+/* =========================================================
+   FLOATING CARD
+========================================================= */
+
+.crystal-faq-floating-card {
+  position: absolute;
+
+  right: -35px;
+  bottom: 0;
+
+  z-index: 8;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  width: 265px;
+
+  padding: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  border:
+    1px solid
+    rgba(201, 160, 74, 0.30);
+
+  box-shadow:
+    0 20px 55px rgba(37, 48, 48, 0.14);
+
+  backdrop-filter: blur(14px);
+}
+
+.crystal-faq-floating-icon {
+  flex-shrink: 0;
+
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: var(--crystal-aqua-dark);
+
+  background:
+    var(--crystal-aqua-soft);
+
+  border:
+    1px solid
+    var(--crystal-aqua-border);
+}
+
+.crystal-faq-floating-icon svg {
+  color: var(--crystal-gold-dark);
+}
+
+.crystal-faq-floating-card span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--crystal-aqua-dark);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+.crystal-faq-floating-card strong {
+  display: block;
+
+  color: var(--crystal-charcoal);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.crystal-faq-content {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.crystal-faq-heading {
+  margin-bottom: 38px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.crystal-faq-eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 17px;
+
+  color: var(--crystal-aqua-dark);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2.3px;
+}
+
+.crystal-faq-eyebrow-line {
+  width: 32px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--crystal-gold),
+      var(--crystal-aqua)
+    );
+}
+
+.crystal-faq-eyebrow svg {
+  color: var(--crystal-gold);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.crystal-faq-heading h2 {
+  max-width: 650px;
+
+  margin: 0 0 18px;
+
+  color: var(--crystal-charcoal);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(
+    38px,
+    4vw,
+    58px
+  );
+
+  font-weight: 400;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.crystal-faq-heading > p {
+  max-width: 610px;
+
+  margin: 0;
+
+  color: var(--crystal-muted);
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   FAQ LIST
+========================================================= */
+
+.crystal-faq-list {
+  border-top:
+    1px solid
+    rgba(201, 160, 74, 0.25);
+}
+
+
+/* =========================================================
+   FAQ ITEM
+========================================================= */
+
+.crystal-faq-item {
+  position: relative;
+
+  border-bottom:
+    1px solid
+    rgba(68, 90, 90, 0.14);
+
+  transition:
+    background 0.35s ease;
+}
+
+.crystal-faq-item:hover {
+  background:
+    rgba(255, 255, 255, 0.55);
+}
+
+.crystal-faq-item-open {
+  background:
+    rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================================
+   QUESTION
+========================================================= */
+
+.crystal-faq-question {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 23px 5px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--crystal-charcoal);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   QUESTION LEFT
+========================================================= */
+
+.crystal-faq-question-left {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.crystal-faq-number {
+  flex-shrink: 0;
+
+  color: var(--crystal-gold-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+
+  transition:
+    color 0.3s ease;
+}
+
+.crystal-faq-item-open
+.crystal-faq-number {
+  color: var(--crystal-aqua-dark);
+}
+
+
+/* =========================================================
+   QUESTION TEXT
+========================================================= */
+
+.crystal-faq-question-text {
+  color: var(--crystal-charcoal);
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  transition:
+    color 0.3s ease;
+}
+
+.crystal-faq-item-open
+.crystal-faq-question-text {
+  color: var(--crystal-aqua-dark);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.crystal-faq-icon {
+  flex-shrink: 0;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: var(--crystal-aqua-dark);
+
+  background:
+    var(--crystal-aqua-soft);
+
+  border:
+    1px solid
+    var(--crystal-aqua-border);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.35s ease;
+}
+
+.crystal-faq-item-open
+.crystal-faq-icon {
+  color: var(--crystal-white);
+
+  background:
+    var(--crystal-aqua-dark);
+
+  border-color:
+    var(--crystal-aqua-dark);
+
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   ANSWER
+========================================================= */
+
+.crystal-faq-answer {
+  display: grid;
+
+  grid-template-rows: 0fr;
+
+  opacity: 0;
+
+  transition:
+    grid-template-rows 0.45s
+      cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.3s ease;
+}
+
+.crystal-faq-answer-open {
+  grid-template-rows: 1fr;
+
+  opacity: 1;
+}
+
+.crystal-faq-answer-inner {
+  overflow: hidden;
+
+  min-height: 0;
+
+  display: flex;
+
+  gap: 15px;
+
+  padding:
+    0 48px 0 45px;
+}
+
+.crystal-faq-answer-open
+.crystal-faq-answer-inner {
+  padding-bottom: 23px;
+}
+
+
+/* =========================================================
+   ANSWER GOLD/AQUA LINE
+========================================================= */
+
+.crystal-faq-answer-line {
+  flex-shrink: 0;
+
+  width: 2px;
+
+  min-height: 40px;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--crystal-aqua),
+      var(--crystal-gold)
+    );
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   ANSWER TEXT
+========================================================= */
+
+.crystal-faq-answer-inner p {
+  margin: 0;
+
+  color: var(--crystal-muted);
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+========================================================= */
+
+.crystal-faq-bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-top: 32px;
+
+  padding:
+    18px 20px;
+
+  background:
+    var(--crystal-aqua-soft);
+
+  border:
+    1px solid
+    var(--crystal-aqua-border);
+}
+
+
+/* =========================================================
+   CTA TEXT
+========================================================= */
+
+.crystal-faq-bottom-text span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--crystal-charcoal);
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.crystal-faq-bottom-text p {
+  margin: 0;
+
+  color: var(--crystal-muted);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.crystal-faq-contact-btn {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 43px;
+
+  padding: 0 18px;
+
+  color: var(--crystal-white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-aqua-dark),
+      var(--crystal-aqua-deep)
+    );
+
+  border:
+    1px solid
+    var(--crystal-aqua-dark);
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.1px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.crystal-faq-contact-btn:hover {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-aqua),
+      var(--crystal-aqua-dark)
+    );
+
+  box-shadow:
+    0 12px 28px
+    rgba(67, 143, 140, 0.22);
+}
+
+.crystal-faq-contact-btn svg {
+  transition:
+    transform 0.3s ease;
+}
+
+.crystal-faq-contact-btn:hover svg {
+  transform:
+    translate(2px, -2px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.crystal-faq-empty {
+  padding: 35px;
+
+  text-align: center;
+
+  background:
+    var(--crystal-white);
+
+  border:
+    1px solid
+    var(--crystal-border);
+}
+
+.crystal-faq-empty p {
+  margin: 0;
+
+  color: var(--crystal-muted);
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+========================================================= */
+
+.crystal-faq-question:focus-visible,
+.crystal-faq-contact-btn:focus-visible {
+  outline:
+    2px solid
+    var(--crystal-aqua-dark);
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .crystal-faq-section {
+    padding: 95px 0;
+  }
+
+  .crystal-faq-container {
+    gap: 55px;
+  }
+
+  .crystal-faq-image-wrap,
+  .crystal-faq-image {
+    height: 530px;
+    min-height: 530px;
+  }
+
+  .crystal-faq-heading h2 {
+    font-size: 46px;
+  }
+
+  .crystal-faq-floating-card {
+    right: -20px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .crystal-faq-section {
+    padding: 80px 0;
+  }
+
+  .crystal-faq-container {
+    grid-template-columns: 1fr;
+
+    gap: 65px;
+  }
+
+  .crystal-faq-visual {
+    width: min(650px, 100%);
+
+    margin: 0 auto;
+
+    padding-right: 20px;
+  }
+
+  .crystal-faq-image-wrap,
+  .crystal-faq-image {
+    height: 540px;
+    min-height: 540px;
+  }
+
+  .crystal-faq-content {
+    width: min(700px, 100%);
+
+    margin: 0 auto;
+  }
+
+  .crystal-faq-heading {
+    text-align: center;
+  }
+
+  .crystal-faq-eyebrow {
+    justify-content: center;
+  }
+
+  .crystal-faq-heading h2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .crystal-faq-heading > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .crystal-faq-section {
+    padding: 70px 0;
+  }
+
+  .crystal-faq-container {
+    width: min(
+      100% - 30px,
+      520px
+    );
+
+    gap: 52px;
+  }
+
+  .crystal-faq-visual {
+    padding:
+      10px 10px 55px 0;
+  }
+
+  .crystal-faq-image-wrap,
+  .crystal-faq-image {
+    height: 430px;
+    min-height: 430px;
+  }
+
+  .crystal-faq-image-frame {
+    top: 13px;
+    left: 13px;
+  }
+
+  .crystal-faq-image-frame::after {
+    top: 10px;
+    left: 10px;
+  }
+
+  .crystal-faq-image-badge {
+    left: 15px;
+    bottom: 15px;
+
+    padding:
+      9px 12px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.1px;
+  }
+
+  .crystal-faq-floating-card {
+    right: -5px;
+
+    width: 235px;
+
+    padding: 15px;
+  }
+
+  .crystal-faq-floating-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .crystal-faq-floating-card strong {
+    font-size: 13px;
+  }
+
+  .crystal-faq-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .crystal-faq-heading h2 {
+    font-size: 36px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .crystal-faq-heading > p {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .crystal-faq-heading {
+    margin-bottom: 27px;
+  }
+
+  .crystal-faq-question {
+    gap: 12px;
+
+    padding: 18px 2px;
+  }
+
+  .crystal-faq-question-left {
+    gap: 11px;
+  }
+
+  .crystal-faq-number {
+    font-size: 11px;
+  }
+
+  .crystal-faq-question-text {
+    font-size: 13px;
+
+    line-height: 1.45;
+  }
+
+  .crystal-faq-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .crystal-faq-answer-inner {
+    gap: 11px;
+
+    padding:
+      0 10px 0 27px;
+  }
+
+  .crystal-faq-answer-open
+  .crystal-faq-answer-inner {
+    padding-bottom: 18px;
+  }
+
+  .crystal-faq-answer-inner p {
+    font-size: 12px;
+
+    line-height: 1.75;
+  }
+
+  .crystal-faq-bottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 17px;
+  }
+
+  .crystal-faq-contact-btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .crystal-faq-section {
+    padding: 55px 0;
+  }
+
+  .crystal-faq-container {
+    width:
+      calc(100% - 24px);
+
+    gap: 45px;
+  }
+
+  .crystal-faq-image-wrap,
+  .crystal-faq-image {
+    height: 370px;
+    min-height: 370px;
+  }
+
+  .crystal-faq-floating-card {
+    width: 215px;
+
+    right: 0;
+
+    padding: 12px;
+  }
+
+  .crystal-faq-floating-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .crystal-faq-floating-card span {
+    font-size: 8px;
+  }
+
+  .crystal-faq-floating-card strong {
+    font-size: 11px;
+  }
+
+  .crystal-faq-heading h2 {
+    font-size: 31px;
+  }
+
+  .crystal-faq-question-text {
+    font-size: 12px;
+  }
+
+  .crystal-faq-number {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .crystal-faq-image,
+  .crystal-faq-contact-btn,
+  .crystal-faq-contact-btn svg,
+  .crystal-faq-icon,
+  .crystal-faq-answer {
+    transition: none !important;
+  }
+
+  .crystal-faq-image-wrap:hover
+  .crystal-faq-image {
+    transform: none;
+  }
+
+  .crystal-faq-contact-btn:hover {
+    transform: none;
+  }
+}

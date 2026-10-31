@@ -1,0 +1,2389 @@
+/* =========================================================
+   CRYSTAL THAI SPA
+   PREMIUM HOME PAGE
+   LIGHT LUXURY REDESIGN
+
+   IVORY • CRYSTAL AQUA • CHAMPAGNE GOLD
+   DESKTOP + TABLET + MOBILE FIRST
+========================================================= */
+
+
+/* =========================================================
+   HOME PAGE VARIABLES
+========================================================= */
+
+:root {
+
+  --crystal-ivory: #f8f7f2;
+  --crystal-cream: #f2efe6;
+  --crystal-white: #ffffff;
+  --crystal-soft: #fcfcf9;
+
+  --crystal-aqua: #70c5c2;
+  --crystal-aqua-light: #dff3f1;
+  --crystal-aqua-soft: #edf8f7;
+  --crystal-aqua-dark: #438f8c;
+  --crystal-aqua-deep: #2f7472;
+
+  --crystal-gold: #c9a04a;
+  --crystal-gold-light: #e5ca83;
+  --crystal-gold-dark: #9b752b;
+  --crystal-gold-soft: #f6eed9;
+
+  --crystal-charcoal: #25282a;
+  --crystal-text: #414747;
+  --crystal-muted: #777d7d;
+
+  --crystal-border:
+    rgba(67, 143, 140, 0.16);
+
+  --crystal-border-light:
+    rgba(37, 40, 42, 0.08);
+
+  --crystal-shadow-sm:
+    0 8px 25px rgba(45, 88, 87, 0.07);
+
+  --crystal-shadow:
+    0 18px 50px rgba(45, 88, 87, 0.10);
+
+  --crystal-shadow-lg:
+    0 28px 75px rgba(45, 88, 87, 0.14);
+
+  --crystal-whatsapp:
+    #25a366;
+
+  --crystal-whatsapp-dark:
+    #1b8050;
+
+  --crystal-call:
+    #3478c5;
+
+  --crystal-call-dark:
+    #2863a6;
+}
+
+
+/* =========================================================
+   HOME PAGE
+========================================================= */
+
+.home-page {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  background:
+    var(--crystal-ivory);
+
+  color:
+    var(--crystal-text);
+
+  overflow:
+    hidden;
+}
+
+
+/* =========================================================
+   COMMON SECTION HEADER
+========================================================= */
+
+.home-section-header {
+
+  position: relative;
+
+  width: 100%;
+
+  max-width: 850px;
+
+  margin:
+    0 auto 58px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.home-eyebrow {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 11px;
+
+  margin:
+    0 0 15px;
+
+  color:
+    var(--crystal-aqua-dark);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size:
+    10px;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    3.5px;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================================================
+   EYEBROW LINES
+========================================================= */
+
+.home-eyebrow::before,
+.home-eyebrow::after {
+
+  content: "";
+
+  width:
+    32px;
+
+  height:
+    1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--crystal-aqua)
+    );
+}
+
+
+.home-eyebrow::after {
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--crystal-aqua),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.home-section-header h2 {
+
+  margin:
+    0;
+
+  color:
+    var(--crystal-charcoal);
+
+  font-family:
+    "Playfair Display",
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(42px, 5vw, 68px);
+
+  font-weight:
+    500;
+
+  line-height:
+    1.05;
+
+  letter-spacing:
+    -1px;
+}
+
+
+/* =========================================================
+   TITLE DECORATION
+========================================================= */
+
+.home-section-header h2::after {
+
+  content: "";
+
+  display:
+    block;
+
+  width:
+    65px;
+
+  height:
+    2px;
+
+  margin:
+    18px auto 0;
+
+  border-radius:
+    10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--crystal-aqua),
+      var(--crystal-gold),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   SECTION DESCRIPTION
+========================================================= */
+
+.home-section-description {
+
+  max-width:
+    650px;
+
+  margin:
+    20px auto 0;
+
+  color:
+    var(--crystal-muted);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size:
+    13px;
+
+  line-height:
+    1.85;
+}
+
+
+/* =========================================================
+   SERVICES SECTION
+========================================================= */
+
+.home-services {
+
+  position:
+    relative;
+
+  width:
+    100%;
+
+  padding:
+    105px
+    clamp(20px, 5vw, 90px);
+
+  overflow:
+    hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--crystal-white) 0%,
+      var(--crystal-aqua-soft) 100%
+    );
+}
+
+
+/* =========================================================
+   SERVICES DECORATIVE RING
+========================================================= */
+
+.home-services::before {
+
+  content: "";
+
+  position:
+    absolute;
+
+  right:
+    -180px;
+
+  top:
+    80px;
+
+  width:
+    430px;
+
+  height:
+    430px;
+
+  border:
+    1px solid
+    rgba(112, 197, 194, 0.16);
+
+  border-radius:
+    50%;
+
+  box-shadow:
+    0 0 0 30px
+    rgba(112, 197, 194, 0.025),
+    0 0 0 60px
+    rgba(201, 160, 74, 0.025);
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   SERVICES CONTAINER
+========================================================= */
+
+.home-services .services-container {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  width:
+    100%;
+
+  max-width:
+    1500px;
+
+  margin:
+    0 auto;
+}
+
+
+/* =========================================================
+   SECTION BUTTON
+========================================================= */
+
+.home-section-button {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  margin-top:
+    48px;
+}
+
+
+/* =========================================================
+   OUTLINE BUTTON
+========================================================= */
+
+.home-outline-button {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  min-width:
+    195px;
+
+  min-height:
+    50px;
+
+  padding:
+    13px 27px;
+
+  border:
+    1px solid
+    var(--crystal-aqua-dark);
+
+  border-radius:
+    5px;
+
+  background:
+    var(--crystal-white);
+
+  color:
+    var(--crystal-aqua-deep);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size:
+    10px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    1.8px;
+
+  text-transform:
+    uppercase;
+
+  text-decoration:
+    none;
+
+  box-shadow:
+    var(--crystal-shadow-sm);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.home-outline-button:hover {
+
+  background:
+    var(--crystal-aqua);
+
+  border-color:
+    var(--crystal-aqua);
+
+  color:
+    #ffffff;
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 14px 32px
+    rgba(67, 143, 140, 0.20);
+}
+
+
+/* =========================================================
+   WHY CHOOSE US
+========================================================= */
+
+.home-why {
+
+  position:
+    relative;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  width:
+    100%;
+
+  min-height:
+    680px;
+
+  overflow:
+    hidden;
+
+  background:
+    var(--crystal-white);
+}
+
+
+/* =========================================================
+   WHY IMAGE
+========================================================= */
+
+.home-why-image {
+
+  position:
+    relative;
+
+  width:
+    100%;
+
+  min-height:
+    680px;
+
+  overflow:
+    hidden;
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.home-why-image::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02),
+      rgba(67, 143, 140, 0.10)
+    );
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   WHY IMAGE
+========================================================= */
+
+.home-why-image img {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  object-position:
+    center;
+
+  display:
+    block;
+
+  filter:
+    saturate(0.92)
+    contrast(1.01);
+
+  transition:
+    transform 0.9s ease;
+}
+
+
+.home-why:hover
+.home-why-image img {
+
+  transform:
+    scale(1.035);
+}
+
+
+/* =========================================================
+   WHY CONTENT
+========================================================= */
+
+.home-why-content {
+
+  position:
+    relative;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+  padding:
+    90px
+    clamp(45px, 7vw, 100px);
+
+  overflow:
+    hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(112, 197, 194, 0.13),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(201, 160, 74, 0.08),
+      transparent 25%
+    ),
+
+    var(--crystal-aqua-soft);
+
+  color:
+    var(--crystal-text);
+}
+
+
+/* =========================================================
+   WHY DECORATIVE CORNERS
+========================================================= */
+
+.home-why-content::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  top:
+    45px;
+
+  right:
+    45px;
+
+  width:
+    105px;
+
+  height:
+    105px;
+
+  border-top:
+    1px solid
+    rgba(67, 143, 140, 0.28);
+
+  border-right:
+    1px solid
+    rgba(67, 143, 140, 0.28);
+
+  pointer-events:
+    none;
+}
+
+
+.home-why-content::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  bottom:
+    45px;
+
+  left:
+    45px;
+
+  width:
+    75px;
+
+  height:
+    75px;
+
+  border-bottom:
+    1px solid
+    rgba(201, 160, 74, 0.24);
+
+  border-left:
+    1px solid
+    rgba(201, 160, 74, 0.24);
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   WHY EYEBROW
+========================================================= */
+
+.home-why-content .home-eyebrow {
+
+  justify-content:
+    flex-start;
+
+  color:
+    var(--crystal-aqua-dark);
+}
+
+
+.home-why-content .home-eyebrow::before {
+
+  display:
+    none;
+}
+
+
+.home-why-content .home-eyebrow::after {
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--crystal-aqua),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   WHY TITLE
+========================================================= */
+
+.home-why-content h2 {
+
+  margin:
+    0 0 25px;
+
+  color:
+    var(--crystal-charcoal);
+
+  font-family:
+    "Playfair Display",
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(45px, 5vw, 68px);
+
+  font-weight:
+    500;
+
+  line-height:
+    1;
+
+  letter-spacing:
+    -1px;
+}
+
+
+/* =========================================================
+   WHY DESCRIPTION
+========================================================= */
+
+.home-why-content > p {
+
+  max-width:
+    600px;
+
+  margin:
+    0 0 14px;
+
+  color:
+    var(--crystal-muted);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size:
+    13px;
+
+  line-height:
+    1.85;
+}
+
+
+/* =========================================================
+   FEATURE LIST
+========================================================= */
+
+.home-feature-list {
+
+  margin:
+    22px
+    0
+    30px;
+}
+
+
+/* =========================================================
+   FEATURE
+========================================================= */
+
+.home-feature {
+
+  display:
+    flex;
+
+  gap:
+    18px;
+
+  padding:
+    17px
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(67, 143, 140, 0.13);
+}
+
+
+.home-feature:first-child {
+
+  border-top:
+    1px solid
+    rgba(67, 143, 140, 0.13);
+}
+
+
+/* =========================================================
+   FEATURE NUMBER
+========================================================= */
+
+.home-feature > span {
+
+  flex:
+    0 0 auto;
+
+  color:
+    var(--crystal-gold-dark);
+
+  font-family:
+    "Playfair Display",
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    21px;
+}
+
+
+/* =========================================================
+   FEATURE TITLE
+========================================================= */
+
+.home-feature h3 {
+
+  margin:
+    0 0 5px;
+
+  color:
+    var(--crystal-charcoal);
+
+  font-family:
+    "Playfair Display",
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    21px;
+
+  font-weight:
+    500;
+}
+
+
+/* =========================================================
+   FEATURE DESCRIPTION
+========================================================= */
+
+.home-feature p {
+
+  margin:
+    0;
+
+  color:
+    var(--crystal-muted);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size:
+    12px;
+
+  line-height:
+    1.7;
+}
+
+
+/* =========================================================
+   PRIMARY HOME BUTTON
+========================================================= */
+
+.home-gold-button {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width:
+    fit-content;
+
+  min-height:
+    50px;
+
+  padding:
+    13px 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-aqua-dark),
+      var(--crystal-aqua)
+    );
+
+  color:
+    #ffffff;
+
+  border:
+    1px solid
+    var(--crystal-aqua);
+
+  border-radius:
+    5px;
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size:
+    10px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    1.8px;
+
+  text-transform:
+    uppercase;
+
+  text-decoration:
+    none;
+
+  box-shadow:
+    0 12px 30px
+    rgba(67, 143, 140, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.home-gold-button:hover {
+
+  transform:
+    translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-aqua-deep),
+      var(--crystal-aqua-dark)
+    );
+
+  box-shadow:
+    0 16px 36px
+    rgba(67, 143, 140, 0.25);
+}
+
+
+/* =========================================================
+   OFFERS
+========================================================= */
+
+.home-offers {
+
+  position:
+    relative;
+
+  width:
+    100%;
+
+  padding:
+    105px
+    clamp(20px, 5vw, 90px);
+
+  overflow:
+    hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--crystal-cream),
+      var(--crystal-ivory)
+    );
+}
+
+
+/* =========================================================
+   OFFERS DECORATION
+========================================================= */
+
+.home-offers::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    -180px;
+
+  top:
+    80px;
+
+  width:
+    430px;
+
+  height:
+    430px;
+
+  border:
+    1px solid
+    rgba(201, 160, 74, 0.12);
+
+  border-radius:
+    50%;
+
+  box-shadow:
+    0 0 0 28px
+    rgba(201, 160, 74, 0.025);
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.home-gallery {
+
+  position:
+    relative;
+
+  width:
+    100%;
+
+  padding:
+    105px
+    clamp(20px, 5vw, 90px);
+
+  overflow:
+    hidden;
+
+  background:
+    var(--crystal-white);
+}
+
+
+/* =========================================================
+   GALLERY DECORATION
+========================================================= */
+
+.home-gallery::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  right:
+    -160px;
+
+  top:
+    60px;
+
+  width:
+    400px;
+
+  height:
+    400px;
+
+  border:
+    1px solid
+    rgba(112, 197, 194, 0.11);
+
+  border-radius:
+    50%;
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.home-cta {
+
+  position:
+    relative;
+
+  width:
+    100%;
+
+  min-height:
+    570px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  padding:
+    90px 25px;
+
+  background-image:
+    url("/images/home/home-cta.jpg");
+
+  background-size:
+    cover;
+
+  background-position:
+    center;
+
+  overflow:
+    hidden;
+}
+
+
+/* =========================================================
+   CTA OVERLAY
+========================================================= */
+
+.home-cta-overlay {
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(32, 78, 76, 0.88),
+      rgba(48, 100, 97, 0.66),
+      rgba(32, 78, 76, 0.82)
+    );
+}
+
+
+/* =========================================================
+   CTA AMBIENT LIGHT
+========================================================= */
+
+.home-cta::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  z-index:
+    1;
+
+  width:
+    440px;
+
+  height:
+    440px;
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(229, 202, 131, 0.15),
+      transparent 65%
+    );
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   CTA CONTENT
+========================================================= */
+
+.home-cta-content {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  width:
+    100%;
+
+  max-width:
+    850px;
+
+  text-align:
+    center;
+}
+
+
+/* =========================================================
+   CTA EYEBROW
+========================================================= */
+
+.home-cta-content .home-eyebrow {
+
+  color:
+    #e5f7f5;
+}
+
+
+/* =========================================================
+   CTA TITLE
+========================================================= */
+
+.home-cta-content h2 {
+
+  margin:
+    0;
+
+  color:
+    #ffffff;
+
+  font-family:
+    "Playfair Display",
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(50px, 7vw, 88px);
+
+  font-weight:
+    500;
+
+  line-height:
+    0.98;
+
+  letter-spacing:
+    -1.2px;
+}
+
+
+/* =========================================================
+   CTA DESCRIPTION
+========================================================= */
+
+.home-cta-content > p {
+
+  max-width:
+    620px;
+
+  margin:
+    24px auto;
+
+  color:
+    rgba(255, 255, 255, 0.86);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size:
+    13px;
+
+  line-height:
+    1.85;
+}
+
+
+/* =========================================================
+   CTA ACTIONS
+========================================================= */
+
+.home-cta-actions {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  flex-wrap:
+    wrap;
+}
+
+
+/* =========================================================
+   CTA OUTLINE
+========================================================= */
+
+.home-cta-outline {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  min-height:
+    50px;
+
+  padding:
+    13px 28px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.75);
+
+  border-radius:
+    5px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  color:
+    #ffffff;
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size:
+    10px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    1.8px;
+
+  text-transform:
+    uppercase;
+
+  text-decoration:
+    none;
+
+  backdrop-filter:
+    blur(8px);
+
+  -webkit-backdrop-filter:
+    blur(8px);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.home-cta-outline:hover {
+
+  background:
+    #ffffff;
+
+  border-color:
+    #ffffff;
+
+  color:
+    var(--crystal-aqua-deep);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.home-contact {
+
+  position:
+    relative;
+
+  width:
+    100%;
+
+  background:
+    var(--crystal-aqua-soft);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .home-services,
+  .home-offers,
+  .home-gallery {
+
+    padding-top:
+      80px;
+
+    padding-bottom:
+      80px;
+  }
+
+
+  .home-why {
+
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .home-why-image {
+
+    min-height:
+      520px;
+
+    max-height:
+      620px;
+  }
+
+
+  .home-why-content {
+
+    padding:
+      80px 55px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  /* -------------------------------------------------------
+     SECTION HEADER
+  ------------------------------------------------------- */
+
+  .home-section-header {
+
+    margin-bottom:
+      40px;
+
+    padding:
+      0 4px;
+  }
+
+
+  .home-eyebrow {
+
+    margin-bottom:
+      10px;
+
+    font-size:
+      8.5px;
+
+    letter-spacing:
+      2.7px;
+  }
+
+
+  .home-eyebrow::before,
+  .home-eyebrow::after {
+
+    width:
+      21px;
+  }
+
+
+  .home-section-header h2 {
+
+    font-size:
+      clamp(32px, 9vw, 40px);
+
+    line-height:
+      1.08;
+
+    letter-spacing:
+      -0.5px;
+  }
+
+
+  .home-section-header h2::after {
+
+    width:
+      48px;
+
+    margin-top:
+      13px;
+  }
+
+
+  .home-section-description {
+
+    margin-top:
+      16px;
+
+    font-size:
+      12px;
+
+    line-height:
+      1.75;
+  }
+
+
+  /* -------------------------------------------------------
+     SERVICES
+  ------------------------------------------------------- */
+
+  .home-services {
+
+    padding:
+      68px 16px;
+  }
+
+
+  .home-services .services-container {
+
+    width:
+      100%;
+  }
+
+
+  .home-section-button {
+
+    margin-top:
+      34px;
+  }
+
+
+  .home-outline-button {
+
+    width:
+      100%;
+
+    max-width:
+      290px;
+
+    min-height:
+      49px;
+  }
+
+
+  /* -------------------------------------------------------
+     WHY IMAGE
+  ------------------------------------------------------- */
+
+  .home-why-image {
+
+    min-height:
+      410px;
+
+    max-height:
+      500px;
+  }
+
+
+  .home-why-image img {
+
+    object-position:
+      center center;
+  }
+
+
+  /* -------------------------------------------------------
+     WHY CONTENT
+  ------------------------------------------------------- */
+
+  .home-why-content {
+
+    padding:
+      62px 22px;
+  }
+
+
+  .home-why-content::before {
+
+    top:
+      24px;
+
+    right:
+      24px;
+
+    width:
+      70px;
+
+    height:
+      70px;
+  }
+
+
+  .home-why-content::after {
+
+    bottom:
+      24px;
+
+    left:
+      24px;
+
+    width:
+      55px;
+
+    height:
+      55px;
+  }
+
+
+  .home-why-content h2 {
+
+    font-size:
+      clamp(36px, 10vw, 45px);
+
+    line-height:
+      1.02;
+  }
+
+
+  .home-why-content > p {
+
+    font-size:
+      12px;
+
+    line-height:
+      1.75;
+  }
+
+
+  /* -------------------------------------------------------
+     FEATURES
+  ------------------------------------------------------- */
+
+  .home-feature-list {
+
+    margin:
+      18px 0 25px;
+  }
+
+
+  .home-feature {
+
+    gap:
+      13px;
+
+    padding:
+      15px 0;
+  }
+
+
+  .home-feature > span {
+
+    font-size:
+      19px;
+  }
+
+
+  .home-feature h3 {
+
+    font-size:
+      18px;
+  }
+
+
+  .home-feature p {
+
+    font-size:
+      11px;
+
+    line-height:
+      1.65;
+  }
+
+
+  .home-gold-button {
+
+    width:
+      100%;
+
+    min-height:
+      50px;
+  }
+
+
+  /* -------------------------------------------------------
+     OFFERS
+  ------------------------------------------------------- */
+
+  .home-offers {
+
+    padding:
+      68px 16px;
+  }
+
+
+  /* -------------------------------------------------------
+     GALLERY
+  ------------------------------------------------------- */
+
+  .home-gallery {
+
+    padding:
+      68px 16px;
+  }
+
+
+  /* -------------------------------------------------------
+     CTA
+  ------------------------------------------------------- */
+
+  .home-cta {
+
+    min-height:
+      500px;
+
+    padding:
+      72px 18px;
+
+    background-position:
+      center;
+
+    background-attachment:
+      scroll;
+  }
+
+
+  .home-cta-overlay {
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(32, 78, 76, 0.68),
+        rgba(32, 78, 76, 0.92)
+      );
+  }
+
+
+  .home-cta-content h2 {
+
+    font-size:
+      clamp(40px, 12vw, 54px);
+
+    line-height:
+      1;
+  }
+
+
+  .home-cta-content > p {
+
+    font-size:
+      12px;
+
+    line-height:
+      1.75;
+
+    margin:
+      18px auto;
+  }
+
+
+  .home-cta-actions {
+
+    flex-direction:
+      column;
+
+    width:
+      100%;
+
+    gap:
+      9px;
+  }
+
+
+  .home-cta-actions a {
+
+    width:
+      100%;
+
+    max-width:
+      310px;
+
+    min-height:
+      49px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .home-section-header {
+
+    margin-bottom:
+      36px;
+  }
+
+
+  .home-eyebrow {
+
+    font-size:
+      8px;
+
+    letter-spacing:
+      2.4px;
+  }
+
+
+  .home-section-header h2 {
+
+    font-size:
+      32px;
+
+    line-height:
+      1.1;
+  }
+
+
+  .home-section-description {
+
+    font-size:
+      11.5px;
+
+    line-height:
+      1.7;
+  }
+
+
+  .home-services,
+  .home-offers,
+  .home-gallery {
+
+    padding-left:
+      14px;
+
+    padding-right:
+      14px;
+  }
+
+
+  .home-why-image {
+
+    min-height:
+      380px;
+  }
+
+
+  .home-why-content {
+
+    padding:
+      55px 18px;
+  }
+
+
+  .home-why-content h2 {
+
+    font-size:
+      38px;
+  }
+
+
+  .home-feature h3 {
+
+    font-size:
+      17px;
+  }
+
+
+  .home-feature p {
+
+    font-size:
+      10.8px;
+  }
+
+
+  .home-cta {
+
+    min-height:
+      480px;
+
+    padding:
+      65px 16px;
+  }
+
+
+  .home-cta-content h2 {
+
+    font-size:
+      42px;
+  }
+
+
+  .home-cta-content > p {
+
+    font-size:
+      11.5px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE 390px
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .home-section-header {
+
+    margin-bottom:
+      32px;
+  }
+
+
+  .home-eyebrow {
+
+    font-size:
+      7.5px;
+
+    letter-spacing:
+      2px;
+  }
+
+
+  .home-eyebrow::before,
+  .home-eyebrow::after {
+
+    width:
+      17px;
+  }
+
+
+  .home-section-header h2 {
+
+    font-size:
+      29px;
+
+    line-height:
+      1.12;
+  }
+
+
+  .home-section-header h2::after {
+
+    width:
+      43px;
+
+    margin-top:
+      11px;
+  }
+
+
+  .home-section-description {
+
+    font-size:
+      11px;
+
+    line-height:
+      1.65;
+  }
+
+
+  .home-services,
+  .home-offers,
+  .home-gallery {
+
+    padding:
+      58px 12px;
+  }
+
+
+  .home-why-image {
+
+    min-height:
+      350px;
+  }
+
+
+  .home-why-content {
+
+    padding:
+      48px 16px;
+  }
+
+
+  .home-why-content::before {
+
+    top:
+      18px;
+
+    right:
+      18px;
+
+    width:
+      55px;
+
+    height:
+      55px;
+  }
+
+
+  .home-why-content::after {
+
+    bottom:
+      18px;
+
+    left:
+      18px;
+
+    width:
+      45px;
+
+    height:
+      45px;
+  }
+
+
+  .home-why-content h2 {
+
+    font-size:
+      34px;
+  }
+
+
+  .home-why-content > p {
+
+    font-size:
+      11px;
+
+    line-height:
+      1.7;
+  }
+
+
+  .home-feature {
+
+    gap:
+      10px;
+
+    padding:
+      13px 0;
+  }
+
+
+  .home-feature > span {
+
+    font-size:
+      18px;
+  }
+
+
+  .home-feature h3 {
+
+    font-size:
+      16px;
+  }
+
+
+  .home-feature p {
+
+    font-size:
+      10px;
+
+    line-height:
+      1.6;
+  }
+
+
+  .home-gold-button {
+
+    min-height:
+      48px;
+
+    font-size:
+      9px;
+
+    letter-spacing:
+      1.5px;
+  }
+
+
+  .home-cta {
+
+    min-height:
+      450px;
+
+    padding:
+      55px 14px;
+  }
+
+
+  .home-cta-content h2 {
+
+    font-size:
+      37px;
+  }
+
+
+  .home-cta-content > p {
+
+    font-size:
+      10.8px;
+
+    line-height:
+      1.65;
+  }
+
+
+  .home-cta-actions a {
+
+    max-width:
+      290px;
+
+    min-height:
+      47px;
+
+    font-size:
+      9px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .home-section-header {
+
+    margin-bottom:
+      28px;
+  }
+
+
+  .home-eyebrow {
+
+    font-size:
+      7px;
+
+    letter-spacing:
+      1.8px;
+  }
+
+
+  .home-section-header h2 {
+
+    font-size:
+      27px;
+  }
+
+
+  .home-section-description {
+
+    font-size:
+      10.5px;
+  }
+
+
+  .home-services,
+  .home-offers,
+  .home-gallery {
+
+    padding:
+      52px 10px;
+  }
+
+
+  .home-why-image {
+
+    min-height:
+      325px;
+  }
+
+
+  .home-why-content {
+
+    padding:
+      44px 14px;
+  }
+
+
+  .home-why-content h2 {
+
+    font-size:
+      31px;
+  }
+
+
+  .home-feature {
+
+    gap:
+      9px;
+  }
+
+
+  .home-feature h3 {
+
+    font-size:
+      15px;
+  }
+
+
+  .home-feature p {
+
+    font-size:
+      9.5px;
+  }
+
+
+  .home-cta {
+
+    min-height:
+      430px;
+
+    padding:
+      50px 12px;
+  }
+
+
+  .home-cta-content h2 {
+
+    font-size:
+      34px;
+  }
+
+
+  .home-cta-content > p {
+
+    font-size:
+      10px;
+  }
+
+
+  .home-cta-actions a {
+
+    max-width:
+      275px;
+
+    min-height:
+      45px;
+
+    font-size:
+      8.5px;
+  }
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (
+  max-width: 900px
+) and (
+  orientation: landscape
+) {
+
+  .home-services,
+  .home-offers,
+  .home-gallery {
+
+    padding-top:
+      55px;
+
+    padding-bottom:
+      55px;
+  }
+
+
+  .home-why-image {
+
+    min-height:
+      430px;
+  }
+
+
+  .home-why-content {
+
+    padding:
+      55px 35px;
+  }
+
+
+  .home-cta {
+
+    min-height:
+      430px;
+  }
+
+
+  .home-cta-content h2 {
+
+    font-size:
+      42px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.home-outline-button:focus-visible,
+.home-gold-button:focus-visible,
+.home-cta-outline:focus-visible {
+
+  outline:
+    2px solid
+    var(--crystal-aqua-dark);
+
+  outline-offset:
+    3px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .home-outline-button,
+  .home-gold-button,
+  .home-cta-outline,
+  .home-why-image img {
+
+    transition:
+      none !important;
+  }
+}

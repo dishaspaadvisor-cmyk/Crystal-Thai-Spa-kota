@@ -1,0 +1,1669 @@
+/* =========================================================
+   CRYSTAL THAI SPA
+   PREMIUM LIGHT LUXURY HERO
+   AQUA • IVORY • CHAMPAGNE
+   MOBILE FIRST
+========================================================= */
+
+:root {
+  --crystal-ivory: #f8f7f2;
+  --crystal-cream: #f2efe6;
+  --crystal-white: #ffffff;
+
+  --crystal-aqua: #70c5c2;
+  --crystal-aqua-dark: #438f8c;
+  --crystal-aqua-deep: #2f7472;
+  --crystal-aqua-light: #dff3f1;
+  --crystal-aqua-soft: #edf8f7;
+
+  --crystal-gold: #c9a04a;
+  --crystal-gold-light: #e5ca83;
+  --crystal-gold-dark: #9b752b;
+
+  --crystal-charcoal: #25282a;
+  --crystal-text: #414747;
+  --crystal-muted: #777d7d;
+
+  --crystal-whatsapp: #25a366;
+  --crystal-whatsapp-dark: #1b8050;
+
+  --crystal-blue: #3478c5;
+  --crystal-blue-dark: #2863a6;
+
+  --crystal-border: rgba(112, 197, 194, 0.28);
+  --crystal-gold-border: rgba(201, 160, 74, 0.30);
+
+  --crystal-shadow:
+    0 24px 70px rgba(45, 88, 87, 0.12);
+
+  --crystal-soft-shadow:
+    0 12px 35px rgba(45, 88, 87, 0.10);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+  min-height: 680px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(112, 197, 194, 0.12),
+      transparent 28%
+    ),
+    var(--crystal-ivory);
+}
+
+
+/* =========================================================
+   DESKTOP HERO
+========================================================= */
+
+.hero-desktop {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================================================
+   DESKTOP SLIDES
+========================================================= */
+
+.hero-slides {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: scale(1.04);
+
+  transition:
+    opacity 0.9s ease,
+    transform 1.5s ease,
+    visibility 0.9s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+
+  transform: scale(1);
+}
+
+
+/* =========================================================
+   DESKTOP OVERLAY
+========================================================= */
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(248, 247, 242, 0.96) 0%,
+      rgba(248, 247, 242, 0.90) 20%,
+      rgba(248, 247, 242, 0.65) 40%,
+      rgba(248, 247, 242, 0.18) 65%,
+      rgba(248, 247, 242, 0.08) 100%
+    );
+}
+
+
+/* =========================================================
+   AQUA ATMOSPHERIC GLOW
+========================================================= */
+
+.hero-overlay::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 72% 42%,
+      rgba(112, 197, 194, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(201, 160, 74, 0.08),
+      transparent 25%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BOTTOM FADE
+========================================================= */
+
+.hero-overlay::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 180px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(248, 247, 242, 0.65),
+      rgba(248, 247, 242, 0.15),
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero-content-inner {
+  position: relative;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding:
+    110px
+    70px
+    70px;
+}
+
+
+/* =========================================================
+   DECORATIVE AQUA LINE
+========================================================= */
+
+.hero-content-inner::before {
+  content: "";
+
+  position: absolute;
+
+  left: 70px;
+  top: 50%;
+
+  width: 2px;
+  height: 170px;
+
+  transform: translateY(-50%);
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      var(--crystal-aqua),
+      var(--crystal-gold),
+      transparent
+    );
+
+  opacity: 0.7;
+}
+
+
+/* =========================================================
+   SLIDE CONTENT
+========================================================= */
+
+.hero-slide-content {
+  position: absolute;
+
+  left: 105px;
+
+  max-width: 720px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(25px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.8s ease,
+    visibility 0.7s ease;
+}
+
+.hero-slide-content.active {
+  position: relative;
+
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+
+  color: var(--crystal-aqua-dark);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+.hero-eyebrow span {
+  display: block;
+
+  width: 42px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--crystal-aqua),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.hero-slide-content h1 {
+  margin: 0;
+
+  max-width: 800px;
+
+  color: #fff;
+
+  font-family:
+    "Playfair Display",
+    "Cormorant Garamond",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(52px, 6vw, 86px);
+
+  line-height: 1.02;
+
+  font-weight: 500;
+
+  letter-spacing: -1.5px;
+
+  text-shadow:
+    0 4px 20px rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================================
+   TITLE EMPHASIS
+========================================================= */
+
+.hero-slide-content h1 span {
+  color: var(--crystal-aqua-dark);
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description {
+  max-width: 590px;
+
+  margin: 25px 0 0;
+
+  color: var(--crystal-text);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   DECORATIVE LINE
+========================================================= */
+
+.hero-slide-content::after {
+  content: "";
+
+  display: block;
+
+  width: 75px;
+  height: 1px;
+
+  margin-top: 25px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--crystal-aqua),
+      var(--crystal-gold),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+
+/* =========================================================
+   BUTTON BASE
+========================================================= */
+
+.hero-button {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+
+  padding: 0 30px;
+
+  overflow: hidden;
+
+  border-radius: 4px;
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.hero-button-primary {
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-aqua),
+      var(--crystal-aqua-dark)
+    );
+
+  color: #ffffff;
+
+  border: 1px solid var(--crystal-aqua);
+
+  box-shadow:
+    0 12px 28px rgba(67, 143, 140, 0.20);
+}
+
+.hero-button-primary:hover {
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-aqua-dark),
+      var(--crystal-aqua-deep)
+    );
+
+  border-color: var(--crystal-aqua-dark);
+
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 16px 35px rgba(67, 143, 140, 0.28);
+}
+
+
+/* =========================================================
+   PRIMARY SHINE
+========================================================= */
+
+.hero-button-primary::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -110%;
+
+  width: 55%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.6s ease;
+}
+
+.hero-button-primary:hover::after {
+  left: 130%;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.hero-button-secondary {
+  border: 1px solid var(--crystal-aqua);
+
+  color: var(--crystal-aqua-dark);
+
+  background: rgba(255, 255, 255, 0.82);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 25px rgba(45, 88, 87, 0.08);
+}
+
+.hero-button-secondary:hover {
+  background: var(--crystal-aqua-soft);
+
+  border-color: var(--crystal-aqua-dark);
+
+  color: var(--crystal-aqua-deep);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(45, 88, 87, 0.14);
+}
+
+
+/* =========================================================
+   DESKTOP ARROWS
+========================================================= */
+
+.hero-arrow {
+  position: absolute;
+
+  z-index: 10;
+
+  top: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(67, 143, 140, 0.35);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.78);
+
+  color: var(--crystal-aqua-dark);
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 25px rgba(45, 88, 87, 0.10);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hero-arrow:hover {
+  background: var(--crystal-aqua);
+
+  border-color: var(--crystal-aqua);
+
+  color: #ffffff;
+
+  transform:
+    translateY(-50%)
+    scale(1.07);
+
+  box-shadow:
+    0 10px 28px rgba(67, 143, 140, 0.25);
+}
+
+.hero-arrow-left {
+  left: 28px;
+}
+
+.hero-arrow-right {
+  right: 28px;
+}
+
+
+/* =========================================================
+   COUNTER
+========================================================= */
+
+.hero-counter {
+  position: absolute;
+
+  z-index: 10;
+
+  right: 70px;
+  bottom: 80px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--crystal-charcoal);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+.hero-counter-line {
+  width: 90px;
+  height: 1px;
+
+  background:
+    rgba(37, 40, 42, 0.18);
+}
+
+.hero-counter-line span {
+  display: block;
+
+  height: 1px;
+
+  background: var(--crystal-aqua);
+
+  transition: width 0.5s ease;
+}
+
+
+/* =========================================================
+   DESKTOP DOTS
+========================================================= */
+
+.hero-dots {
+  position: absolute;
+
+  z-index: 10;
+
+  left: 50%;
+  bottom: 32px;
+
+  display: flex;
+
+  gap: 8px;
+
+  transform: translateX(-50%);
+}
+
+.hero-dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background:
+    rgba(67, 143, 140, 0.28);
+
+  cursor: pointer;
+
+  transition:
+    width 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-dot.active {
+  width: 28px;
+
+  border-radius: 10px;
+
+  background: var(--crystal-aqua);
+
+  box-shadow:
+    0 0 12px rgba(112, 197, 194, 0.35);
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.hero-scroll {
+  position: absolute;
+
+  z-index: 10;
+
+  left: 30px;
+  bottom: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--crystal-muted);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.hero-scroll-line {
+  width: 40px;
+  height: 1px;
+
+  background: var(--crystal-aqua);
+}
+
+
+/* =========================================================
+   MOBILE HERO
+========================================================= */
+
+.hero-mobile {
+  display: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .hero-content-inner {
+    padding:
+      100px
+      50px
+      60px;
+  }
+
+  .hero-content-inner::before {
+    left: 50px;
+  }
+
+  .hero-slide-content {
+    left: 85px;
+
+    max-width: 650px;
+  }
+
+  .hero-slide-content h1 {
+    font-size: clamp(46px, 6vw, 70px);
+  }
+
+  .hero-counter {
+    right: 45px;
+  }
+
+  .hero-arrow-left {
+    left: 18px;
+  }
+
+  .hero-arrow-right {
+    right: 18px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    width: 100%;
+
+    height: 100svh;
+
+    min-height: 650px;
+
+    background: var(--crystal-ivory);
+  }
+
+
+  /* -------------------------------------------------------
+     Hide desktop
+  ------------------------------------------------------- */
+
+  .hero-desktop {
+    display: none;
+  }
+
+
+  /* -------------------------------------------------------
+     Show mobile
+  ------------------------------------------------------- */
+
+  .hero-mobile {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /* =======================================================
+     MOBILE VIDEO
+  ======================================================= */
+
+  .hero-mobile-video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+  }
+
+
+  /* =======================================================
+     MOBILE OVERLAY
+  ======================================================= */
+
+  .hero-mobile-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(248, 247, 242, 0.02) 0%,
+        rgba(248, 247, 242, 0.04) 28%,
+        rgba(20, 58, 57, 0.18) 45%,
+        rgba(20, 58, 57, 0.66) 66%,
+        rgba(25, 49, 48, 0.94) 100%
+      );
+  }
+
+
+  /* =======================================================
+     MOBILE AQUA GLOW
+  ======================================================= */
+
+  .hero-mobile-overlay::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+      radial-gradient(
+        circle at 50% 62%,
+        rgba(112, 197, 194, 0.18),
+        transparent 38%
+      );
+
+    pointer-events: none;
+  }
+
+
+  /* =======================================================
+     MOBILE BOTTOM SOFT FADE
+  ======================================================= */
+
+  .hero-mobile-overlay::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 230px;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(28, 66, 65, 0.55),
+        transparent
+      );
+
+    pointer-events: none;
+  }
+
+
+  /* =======================================================
+     MOBILE CONTENT
+  ======================================================= */
+
+  .hero-mobile-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    box-sizing: border-box;
+
+    padding:
+      35px
+      18px
+      24px;
+  }
+
+
+  /* =======================================================
+     MOBILE SLIDES
+  ======================================================= */
+
+  .hero-mobile-slide {
+    display: none;
+
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-mobile-slide.active {
+    display: block;
+
+    animation:
+      mobileHeroFade
+      0.6s ease;
+  }
+
+
+  @keyframes mobileHeroFade {
+
+    from {
+      opacity: 0;
+
+      transform:
+        translateY(15px);
+    }
+
+    to {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+  }
+
+
+  /* =======================================================
+     MOBILE EYEBROW
+  ======================================================= */
+
+  .hero-mobile-eyebrow {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 11px;
+
+    color: #dff3f1;
+
+    font-family:
+      "Poppins",
+      Arial,
+      sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+  }
+
+  .hero-mobile-eyebrow span {
+    width: 25px;
+    height: 1px;
+
+    background:
+      var(--crystal-gold-light);
+  }
+
+
+  /* =======================================================
+     MOBILE TITLE
+  ======================================================= */
+
+  .hero-mobile-slide h1 {
+    margin: 0;
+
+    max-width: 100%;
+
+    color: #ffffff;
+
+    font-family:
+      "Playfair Display",
+      "Cormorant Garamond",
+      Georgia,
+      "Times New Roman",
+      serif;
+
+    font-size:
+      clamp(32px, 9vw, 42px);
+
+    line-height: 1.07;
+
+    font-weight: 500;
+
+    letter-spacing: -0.5px;
+
+    text-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+
+  /* =======================================================
+     MOBILE TITLE EMPHASIS
+  ======================================================= */
+
+  .hero-mobile-slide h1 span {
+    color: #dff3f1;
+  }
+
+
+  /* =======================================================
+     MOBILE DESCRIPTION
+  ======================================================= */
+
+  .hero-mobile-description {
+    max-width: 520px;
+
+    margin:
+      13px 0 0;
+
+    color:
+      rgba(255, 255, 255, 0.88);
+
+    font-family:
+      "Poppins",
+      Arial,
+      sans-serif;
+
+    font-size:
+      clamp(11.5px, 3.2vw, 13px);
+
+    line-height: 1.65;
+  }
+
+
+  /* =======================================================
+     MOBILE DECORATIVE LINE
+  ======================================================= */
+
+  .hero-mobile-description::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 1px;
+
+    margin-top: 13px;
+
+    background:
+      linear-gradient(
+        90deg,
+        var(--crystal-gold-light),
+        transparent
+      );
+  }
+
+
+  /* =======================================================
+     MOBILE CTA
+  ======================================================= */
+
+  .hero-mobile-actions {
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 9px;
+
+    margin-top: 17px;
+  }
+
+
+  .hero-mobile-actions a {
+    min-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding:
+      0
+      10px;
+
+    border-radius: 5px;
+
+    font-family:
+      "Poppins",
+      Arial,
+      sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.1px;
+
+    text-decoration: none;
+
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
+
+    -webkit-tap-highlight-color:
+      transparent;
+  }
+
+
+  .hero-mobile-actions a:active {
+    transform: scale(0.96);
+  }
+
+
+  /* =======================================================
+     MOBILE CALL
+  ======================================================= */
+
+  .hero-mobile-call {
+    background:
+      rgba(255, 255, 255, 0.96);
+
+    color:
+      var(--crystal-aqua-deep);
+
+    border:
+      1px solid
+      rgba(255, 255, 255, 0.85);
+
+    box-shadow:
+      0 8px 22px
+      rgba(0, 0, 0, 0.12);
+  }
+
+
+  .hero-mobile-call:hover {
+    background: #ffffff;
+
+    color: var(--crystal-aqua-deep);
+  }
+
+
+  /* =======================================================
+     MOBILE WHATSAPP
+  ======================================================= */
+
+  .hero-mobile-whatsapp {
+    background:
+      var(--crystal-whatsapp);
+
+    color: #ffffff;
+
+    border:
+      1px solid
+      var(--crystal-whatsapp);
+
+    box-shadow:
+      0 8px 22px
+      rgba(37, 163, 102, 0.22);
+  }
+
+
+  .hero-mobile-whatsapp:hover {
+    background:
+      var(--crystal-whatsapp-dark);
+
+    border-color:
+      var(--crystal-whatsapp-dark);
+
+    color: #ffffff;
+  }
+
+
+  /* =======================================================
+     MOBILE DOTS
+  ======================================================= */
+
+  .hero-mobile-dots {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 17px;
+  }
+
+
+  .hero-mobile-dots button {
+    width: 7px;
+    height: 7px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background:
+      rgba(255, 255, 255, 0.45);
+
+    cursor: pointer;
+
+    transition:
+      width 0.3s ease,
+      background 0.3s ease;
+
+    -webkit-tap-highlight-color:
+      transparent;
+  }
+
+
+  .hero-mobile-dots button.active {
+    width: 24px;
+
+    border-radius: 10px;
+
+    background:
+      var(--crystal-gold-light);
+  }
+}
+
+
+/* =========================================================
+   MOBILE 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero-mobile-video {
+    object-position: 52% center;
+  }
+
+  .hero-mobile-content {
+    padding:
+      30px
+      16px
+      22px;
+  }
+
+  .hero-mobile-slide h1 {
+    font-size:
+      clamp(31px, 9vw, 38px);
+  }
+
+  .hero-mobile-description {
+    max-width: 95%;
+  }
+
+  .hero-mobile-actions a {
+    min-height: 49px;
+
+    font-size: 10.5px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-mobile-video {
+    object-position: 50% center;
+  }
+
+  .hero-mobile-content {
+    padding:
+      28px
+      15px
+      20px;
+  }
+
+  .hero-mobile-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 9px;
+  }
+
+  .hero-mobile-slide h1 {
+    font-size: 32px;
+
+    line-height: 1.08;
+  }
+
+  .hero-mobile-description {
+    font-size: 11.5px;
+
+    line-height: 1.6;
+
+    margin-top: 12px;
+  }
+
+  .hero-mobile-actions {
+    gap: 8px;
+
+    margin-top: 15px;
+  }
+
+  .hero-mobile-actions a {
+    min-height: 47px;
+
+    font-size: 10px;
+
+    gap: 6px;
+  }
+
+  .hero-mobile-dots {
+    margin-top: 15px;
+  }
+}
+
+
+/* =========================================================
+   390px MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .hero {
+    min-height: 590px;
+  }
+
+  .hero-mobile-content {
+    padding:
+      25px
+      14px
+      18px;
+  }
+
+  .hero-mobile-slide h1 {
+    font-size: 30px;
+  }
+
+  .hero-mobile-description {
+    font-size: 11px;
+
+    line-height: 1.58;
+  }
+
+  .hero-mobile-actions {
+    margin-top: 14px;
+  }
+
+  .hero-mobile-actions a {
+    min-height: 45px;
+
+    font-size: 9.7px;
+  }
+
+  .hero-mobile-dots {
+    margin-top: 14px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 340px) {
+
+  .hero {
+    min-height: 570px;
+  }
+
+  .hero-mobile-content {
+    padding:
+      22px
+      12px
+      16px;
+  }
+
+  .hero-mobile-eyebrow {
+    font-size: 7.5px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .hero-mobile-slide h1 {
+    font-size: 27px;
+  }
+
+  .hero-mobile-description {
+    font-size: 10.5px;
+
+    line-height: 1.55;
+  }
+
+  .hero-mobile-actions {
+    gap: 7px;
+
+    margin-top: 12px;
+  }
+
+  .hero-mobile-actions a {
+    min-height: 43px;
+
+    padding:
+      0
+      7px;
+
+    font-size: 9px;
+  }
+
+  .hero-mobile-dots {
+    margin-top: 12px;
+  }
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (
+  max-width: 900px
+) and (
+  orientation: landscape
+) {
+
+  .hero {
+    height: 100svh;
+
+    min-height: 500px;
+  }
+
+  .hero-mobile-content {
+    padding:
+      18px
+      28px
+      15px;
+  }
+
+  .hero-mobile-slide h1 {
+    font-size: 28px;
+  }
+
+  .hero-mobile-description {
+    max-width: 550px;
+
+    font-size: 11px;
+  }
+
+  .hero-mobile-actions {
+    max-width: 380px;
+
+    margin-top: 12px;
+  }
+
+  .hero-mobile-actions a {
+    min-height: 42px;
+  }
+
+  .hero-mobile-dots {
+    margin-top: 10px;
+  }
+}
+
+
+/* =========================================================
+   VERY TALL MOBILE DEVICES
+========================================================= */
+
+@media (
+  max-width: 768px
+) and (
+  min-height: 800px
+) {
+
+  .hero-mobile-content {
+    padding-bottom: 28px;
+  }
+
+  .hero-mobile-slide h1 {
+    font-size:
+      clamp(34px, 9vw, 42px);
+  }
+
+  .hero-mobile-description {
+    margin-top: 15px;
+  }
+
+  .hero-mobile-actions {
+    margin-top: 19px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.hero-arrow:focus-visible,
+.hero-dot:focus-visible,
+.hero-mobile-dots button:focus-visible,
+.hero-button:focus-visible,
+.hero-mobile-actions a:focus-visible {
+
+  outline:
+    2px solid
+    var(--crystal-aqua);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-slide,
+  .hero-slide-content,
+  .hero-button,
+  .hero-arrow,
+  .hero-dot,
+  .hero-mobile-slide,
+  .hero-mobile-actions a {
+
+    transition: none !important;
+  }
+
+  .hero-mobile-slide.active {
+    animation: none;
+  }
+}
+
+
+/* =========================================================
+   SAFER MOBILE VIDEO
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero-mobile-video {
+    pointer-events: none;
+
+    user-select: none;
+
+    -webkit-user-select: none;
+  }
+}

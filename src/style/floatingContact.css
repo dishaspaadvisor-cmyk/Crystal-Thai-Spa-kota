@@ -1,0 +1,799 @@
+/* =========================================================
+   CRYSTAL THAI SPA
+   PREMIUM FLOATING CONTACT BUTTONS
+   LIGHT • AQUA • GOLD • WHATSAPP
+========================================================= */
+
+:root {
+  --crystal-aqua: #70c5c2;
+  --crystal-aqua-dark: #438f8c;
+  --crystal-aqua-light: #dff3f1;
+
+  --crystal-gold: #c9a04a;
+  --crystal-gold-light: #e5ca83;
+  --crystal-gold-dark: #9b752b;
+
+  --crystal-white: #ffffff;
+  --crystal-ivory: #f8f7f2;
+
+  --crystal-charcoal: #25282a;
+  --crystal-muted: #777c7c;
+
+  --crystal-whatsapp: #25a366;
+  --crystal-whatsapp-dark: #1f8d58;
+
+  --crystal-border: rgba(112, 197, 194, 0.35);
+}
+
+
+/* =========================================================
+   FLOATING CONTACT WRAPPER
+========================================================= */
+
+.floating-contact {
+  position: fixed;
+
+  right: 22px;
+  bottom: 25px;
+
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.floating-contact-button {
+  position: relative;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  overflow: visible;
+
+  cursor: pointer;
+
+  isolation: isolate;
+
+  border: 2px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 10px 28px rgba(40, 65, 64, 0.20),
+    0 0 0 4px rgba(112, 197, 194, 0.08);
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    filter 0.35s ease,
+    border-color 0.35s ease;
+
+  animation:
+    floatingButton 3.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   AQUA OUTER RING
+========================================================= */
+
+.floating-contact-button::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -5px;
+
+  border-radius: 50%;
+
+  border: 1px solid
+    rgba(112, 197, 194, 0.55);
+
+  opacity: 0;
+
+  z-index: -1;
+
+  animation:
+    luxuryRipple 3s ease-out infinite;
+}
+
+
+/* =========================================================
+   SECOND GOLD RING
+========================================================= */
+
+.floating-contact-button::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -9px;
+
+  border-radius: 50%;
+
+  border: 1px solid
+    rgba(201, 160, 74, 0.22);
+
+  opacity: 0;
+
+  z-index: -2;
+
+  animation:
+    outerRipple 3.4s ease-out infinite;
+}
+
+
+/* =========================================================
+   CALL BUTTON
+========================================================= */
+
+.floating-call {
+  background:
+    linear-gradient(
+      145deg,
+      #8bd3d0 0%,
+      #70c5c2 48%,
+      #438f8c 100%
+    );
+
+  color: #ffffff;
+
+  border-color:
+    rgba(255, 255, 255, 0.85);
+
+  box-shadow:
+    0 10px 30px rgba(67, 143, 140, 0.30),
+    0 0 0 1px rgba(112, 197, 194, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.40);
+}
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
+
+.floating-whatsapp {
+  background:
+    linear-gradient(
+      145deg,
+      #32b875 0%,
+      #25a366 55%,
+      #1f8d58 100%
+    );
+
+  color: #ffffff;
+
+  border-color:
+    rgba(255, 255, 255, 0.85);
+
+  box-shadow:
+    0 10px 30px rgba(37, 163, 102, 0.25),
+    0 0 0 1px rgba(37, 163, 102, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================================
+   WHATSAPP ICON
+========================================================= */
+
+.floating-whatsapp .floating-icon {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.floating-icon {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  filter:
+    drop-shadow(
+      0 2px 5px rgba(0, 0, 0, 0.18)
+    );
+
+  animation:
+    iconFloat 2.8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ICON SVG
+========================================================= */
+
+.floating-contact-button svg {
+  width: 24px;
+  height: 24px;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+.floating-contact-button:hover {
+  transform:
+    translateY(-7px)
+    scale(1.08);
+
+  filter:
+    brightness(1.04);
+
+  box-shadow:
+    0 18px 40px rgba(40, 65, 64, 0.28),
+    0 0 25px rgba(112, 197, 194, 0.22);
+
+  border-color:
+    #ffffff;
+
+  animation-play-state: paused;
+}
+
+
+.floating-contact-button:hover .floating-icon {
+  animation-play-state: paused;
+}
+
+
+.floating-contact-button:hover svg {
+  transform:
+    scale(1.14)
+    rotate(-5deg);
+
+  filter:
+    drop-shadow(
+      0 3px 8px rgba(0, 0, 0, 0.20)
+    );
+}
+
+
+/* =========================================================
+   CALL HOVER
+========================================================= */
+
+.floating-call:hover {
+  background:
+    linear-gradient(
+      145deg,
+      #a0ddd9 0%,
+      #82cfcb 50%,
+      #579f9c 100%
+    );
+}
+
+
+/* =========================================================
+   WHATSAPP HOVER
+========================================================= */
+
+.floating-whatsapp:hover {
+  background:
+    linear-gradient(
+      145deg,
+      #3bc27f 0%,
+      #25a366 55%,
+      #1f8d58 100%
+    );
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   BUTTON FLOATING ANIMATION
+========================================================= */
+
+@keyframes floatingButton {
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-5px);
+  }
+}
+
+
+/* =========================================================
+   ICON ANIMATION
+========================================================= */
+
+@keyframes iconFloat {
+  0%,
+  100% {
+    transform:
+      scale(1)
+      rotate(0deg);
+  }
+
+  25% {
+    transform:
+      scale(1.04)
+      rotate(-3deg);
+  }
+
+  50% {
+    transform:
+      scale(1.09)
+      rotate(3deg);
+  }
+
+  75% {
+    transform:
+      scale(1.04)
+      rotate(-2deg);
+  }
+}
+
+
+/* =========================================================
+   AQUA RIPPLE
+========================================================= */
+
+.floating-call::before {
+  border-color:
+    rgba(112, 197, 194, 0.65);
+
+  animation:
+    luxuryRipple 2.8s ease-out infinite;
+}
+
+
+.floating-whatsapp::before {
+  border-color:
+    rgba(37, 163, 102, 0.55);
+
+  animation:
+    luxuryRipple 2.8s ease-out infinite;
+
+  animation-delay:
+    1.4s;
+}
+
+
+/* =========================================================
+   OUTER RIPPLE
+========================================================= */
+
+.floating-call::after,
+.floating-whatsapp::after {
+  border-color:
+    rgba(201, 160, 74, 0.28);
+
+  animation:
+    outerRipple 3s ease-out infinite;
+}
+
+
+.floating-whatsapp::after {
+  animation-delay:
+    1.4s;
+}
+
+
+/* =========================================================
+   RIPPLE ANIMATION
+========================================================= */
+
+@keyframes luxuryRipple {
+  0% {
+    transform:
+      scale(0.82);
+
+    opacity: 0.65;
+  }
+
+  60% {
+    transform:
+      scale(1.28);
+
+    opacity: 0.15;
+  }
+
+  100% {
+    transform:
+      scale(1.5);
+
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   OUTER RIPPLE
+========================================================= */
+
+@keyframes outerRipple {
+  0% {
+    transform:
+      scale(0.9);
+
+    opacity: 0.35;
+  }
+
+  70% {
+    transform:
+      scale(1.45);
+
+    opacity: 0;
+  }
+
+  100% {
+    transform:
+      scale(1.45);
+
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   SHINE EFFECT
+========================================================= */
+
+.floating-contact-button .floating-shine {
+  position: absolute;
+
+  top: 0;
+  left: -80%;
+
+  width: 45%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.48),
+      transparent
+    );
+
+  transform:
+    skewX(-20deg);
+
+  animation:
+    buttonShine 4.5s ease-in-out infinite;
+
+  pointer-events: none;
+
+  z-index: 3;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   SHINE ANIMATION
+========================================================= */
+
+@keyframes buttonShine {
+  0% {
+    left: -80%;
+  }
+
+  35% {
+    left: 130%;
+  }
+
+  100% {
+    left: 130%;
+  }
+}
+
+
+/* =========================================================
+   TOOLTIP
+========================================================= */
+
+.floating-tooltip {
+  position: absolute;
+
+  right: 72px;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    translateX(12px)
+    scale(0.95);
+
+  padding:
+    9px 14px;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  color:
+    var(--crystal-charcoal);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+
+  white-space: nowrap;
+
+  border-radius: 7px;
+
+  border:
+    1px solid
+    rgba(112, 197, 194, 0.35);
+
+  box-shadow:
+    0 10px 28px
+    rgba(40, 65, 64, 0.16);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.3s ease;
+}
+
+
+/* =========================================================
+   TOOLTIP TOP LINE
+========================================================= */
+
+.floating-tooltip::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 15px;
+  right: 15px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--crystal-aqua),
+      var(--crystal-gold),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   TOOLTIP ARROW
+========================================================= */
+
+.floating-tooltip::after {
+  content: "";
+
+  position: absolute;
+
+  right: -5px;
+  top: 50%;
+
+  width: 9px;
+  height: 9px;
+
+  background:
+    #ffffff;
+
+  border-top:
+    1px solid
+    rgba(112, 197, 194, 0.35);
+
+  border-right:
+    1px solid
+    rgba(112, 197, 194, 0.35);
+
+  transform:
+    translateY(-50%)
+    rotate(45deg);
+}
+
+
+/* =========================================================
+   TOOLTIP HOVER
+========================================================= */
+
+.floating-contact-button:hover
+.floating-tooltip {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(-50%)
+    translateX(0)
+    scale(1);
+}
+
+
+/* =========================================================
+   CALL TOOLTIP
+========================================================= */
+
+.floating-call .floating-tooltip {
+  border-color:
+    rgba(112, 197, 194, 0.45);
+}
+
+
+/* =========================================================
+   WHATSAPP TOOLTIP
+========================================================= */
+
+.floating-whatsapp .floating-tooltip {
+  border-color:
+    rgba(37, 163, 102, 0.38);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .floating-contact {
+    right: 15px;
+    bottom: 18px;
+
+    gap: 11px;
+  }
+
+
+  .floating-contact-button {
+    width: 54px;
+    height: 54px;
+  }
+
+
+  .floating-contact-button svg {
+    width: 23px;
+    height: 23px;
+  }
+
+
+  /* Hide tooltip on touch devices */
+  .floating-tooltip {
+    display: none;
+  }
+
+
+  .floating-call {
+    animation-duration: 3.2s;
+  }
+
+
+  .floating-whatsapp {
+    animation-duration: 3.2s;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .floating-contact {
+    right: 12px;
+    bottom: 15px;
+
+    gap: 9px;
+  }
+
+
+  .floating-contact-button {
+    width: 50px;
+    height: 50px;
+  }
+
+
+  .floating-contact-button svg {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 320px) {
+
+  .floating-contact {
+    right: 10px;
+    bottom: 12px;
+  }
+
+
+  .floating-contact-button {
+    width: 46px;
+    height: 46px;
+  }
+
+
+  .floating-contact-button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.floating-contact-button:focus-visible {
+  outline:
+    2px solid
+    var(--crystal-aqua-dark);
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .floating-contact-button,
+  .floating-contact-button .floating-icon,
+  .floating-contact-button::before,
+  .floating-contact-button::after,
+  .floating-contact-button .floating-shine {
+    animation: none !important;
+  }
+
+
+  .floating-contact-button {
+    transition: none;
+  }
+
+
+  .floating-contact-button:hover {
+    transform: none;
+  }
+}

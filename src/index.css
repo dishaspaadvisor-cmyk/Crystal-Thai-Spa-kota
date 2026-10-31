@@ -1,0 +1,1485 @@
+/* =========================================================
+   CRYSTAL THAI SPA
+   GLOBAL PREMIUM LIGHT LUXURY DESIGN SYSTEM
+
+   IVORY • CRYSTAL AQUA • CHAMPAGNE GOLD
+   MOBILE FIRST • RESPONSIVE • PREMIUM
+========================================================= */
+
+
+/* =========================================================
+   ROOT DESIGN TOKENS
+========================================================= */
+
+:root {
+
+  /* -------------------------------------------------------
+     BACKGROUNDS
+  ------------------------------------------------------- */
+
+  --crystal-ivory: #f8f7f2;
+  --crystal-cream: #f2efe6;
+  --crystal-white: #ffffff;
+  --crystal-soft-white: #fcfcf9;
+
+  /* -------------------------------------------------------
+     CRYSTAL AQUA
+  ------------------------------------------------------- */
+
+  --crystal-aqua: #70c5c2;
+  --crystal-aqua-light: #dff3f1;
+  --crystal-aqua-soft: #edf8f7;
+
+  --crystal-aqua-dark: #438f8c;
+  --crystal-aqua-deep: #2f7472;
+
+  /* -------------------------------------------------------
+     CHAMPAGNE GOLD
+  ------------------------------------------------------- */
+
+  --crystal-gold: #c9a04a;
+  --crystal-gold-light: #e5ca83;
+  --crystal-gold-dark: #9b752b;
+  --crystal-gold-soft: #f6eed9;
+
+  /* -------------------------------------------------------
+     TEXT
+  ------------------------------------------------------- */
+
+  --crystal-charcoal: #25282a;
+  --crystal-text: #414747;
+  --crystal-muted: #777d7d;
+  --crystal-muted-light: #9ca2a1;
+
+  /* -------------------------------------------------------
+     CONTACT COLORS
+  ------------------------------------------------------- */
+
+  --crystal-whatsapp: #25a366;
+  --crystal-whatsapp-dark: #1b8050;
+
+  --crystal-call: #3478c5;
+  --crystal-call-dark: #2863a6;
+
+  /* -------------------------------------------------------
+     BORDERS
+  ------------------------------------------------------- */
+
+  --crystal-border:
+    rgba(67, 143, 140, 0.16);
+
+  --crystal-border-strong:
+    rgba(67, 143, 140, 0.28);
+
+  --crystal-gold-border:
+    rgba(201, 160, 74, 0.28);
+
+  --crystal-light-border:
+    rgba(37, 40, 42, 0.08);
+
+  /* -------------------------------------------------------
+     SHADOWS
+  ------------------------------------------------------- */
+
+  --crystal-shadow-sm:
+    0 8px 24px rgba(45, 88, 87, 0.07);
+
+  --crystal-shadow:
+    0 16px 45px rgba(45, 88, 87, 0.10);
+
+  --crystal-shadow-lg:
+    0 25px 70px rgba(45, 88, 87, 0.13);
+
+  /* -------------------------------------------------------
+     RADIUS
+  ------------------------------------------------------- */
+
+  --crystal-radius-sm: 6px;
+  --crystal-radius: 12px;
+  --crystal-radius-lg: 18px;
+  --crystal-radius-xl: 24px;
+
+  /* -------------------------------------------------------
+     CONTAINER
+  ------------------------------------------------------- */
+
+  --crystal-container: 1320px;
+
+  /* -------------------------------------------------------
+     TRANSITIONS
+  ------------------------------------------------------- */
+
+  --crystal-transition:
+    0.3s ease;
+
+  --crystal-transition-slow:
+    0.6s ease;
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  width: 100%;
+
+  min-height: 100%;
+
+  scroll-behavior: smooth;
+
+  background:
+    var(--crystal-ivory);
+
+  overflow-x: hidden;
+}
+
+
+body {
+  width: 100%;
+
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    "Poppins",
+    "Inter",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background:
+    var(--crystal-ivory);
+
+  color:
+    var(--crystal-text);
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+#root {
+  width: 100%;
+
+  min-height: 100vh;
+
+  background:
+    var(--crystal-ivory);
+}
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+.app {
+  width: 100%;
+
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+
+  background:
+    var(--crystal-ivory);
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+button {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+img {
+  max-width: 100%;
+
+  display: block;
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+========================================================= */
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+input,
+textarea,
+select {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+section {
+  position: relative;
+}
+
+
+/* =========================================================
+   COMMON SECTION EYEBROW
+========================================================= */
+
+.section-eyebrow {
+
+  margin:
+    0 0 16px;
+
+  text-align: center;
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  letter-spacing: 3.5px;
+
+  text-transform: uppercase;
+
+  color:
+    var(--crystal-aqua-dark);
+}
+
+
+/* =========================================================
+   SECTION EYEBROW DECORATIVE DOT
+========================================================= */
+
+.section-eyebrow::before {
+  content: "";
+
+  display: inline-block;
+
+  width: 5px;
+  height: 5px;
+
+  margin:
+    0 9px
+    2px
+    0;
+
+  border-radius: 50%;
+
+  background:
+    var(--crystal-gold);
+}
+
+
+/* =========================================================
+   COMMON SECTION TITLE
+========================================================= */
+
+.section-title {
+
+  position: relative;
+
+  width: 100%;
+
+  max-width: 850px;
+
+  margin:
+    0 auto;
+
+  padding:
+    0 0 23px;
+
+  text-align: center;
+
+  font-family:
+    "Playfair Display",
+    "Cormorant Garamond",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(38px, 5vw, 62px);
+
+  line-height: 1.08;
+
+  font-weight: 500;
+
+  letter-spacing: -1px;
+
+  color:
+    var(--crystal-charcoal);
+
+  text-rendering:
+    optimizeLegibility;
+}
+
+
+/* =========================================================
+   SECTION TITLE DECORATIVE LINE
+========================================================= */
+
+.section-title::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 0;
+
+  width: 62px;
+  height: 2px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--crystal-aqua),
+      var(--crystal-gold),
+      transparent
+    );
+
+  border-radius:
+    20px;
+}
+
+
+/* =========================================================
+   CENTERED SECTION HEADING
+========================================================= */
+
+.home-section-heading {
+
+  width: 100%;
+
+  max-width: 850px;
+
+  margin:
+    0 auto 70px;
+
+  text-align: center;
+}
+
+
+.home-section-heading .section-eyebrow {
+  text-align: center;
+}
+
+
+.home-section-heading .section-title {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.home-section-heading > p:last-child {
+
+  max-width: 650px;
+
+  margin:
+    25px auto 0;
+
+  text-align: center;
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+
+  color:
+    var(--crystal-muted);
+}
+
+
+/* =========================================================
+   WELCOME TITLE
+========================================================= */
+
+.home-welcome-content .section-title {
+
+  margin-left: 0;
+  margin-right: 0;
+
+  text-align: left;
+}
+
+
+.home-welcome-content .section-title::after {
+
+  left: 0;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   WHY CHOOSE US
+========================================================= */
+
+.home-why-content .section-title {
+
+  margin-left: 0;
+  margin-right: 0;
+
+  text-align: left;
+
+  color:
+    var(--crystal-charcoal);
+}
+
+
+.home-why-content .section-title::after {
+
+  left: 0;
+
+  transform: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--crystal-aqua),
+      var(--crystal-gold),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   FINAL CTA TITLE
+========================================================= */
+
+.home-final-content .section-title {
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  color:
+    var(--crystal-charcoal);
+}
+
+
+.home-final-content .section-title::after {
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--crystal-aqua),
+      var(--crystal-gold),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   COMMON PARAGRAPH
+========================================================= */
+
+p {
+  color:
+    var(--crystal-text);
+}
+
+
+/* =========================================================
+   PREMIUM PAGE BACKGROUND
+========================================================= */
+
+.page-placeholder {
+
+  min-height: 70vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding:
+    80px 20px;
+
+  background:
+
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(112, 197, 194, 0.12),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(201, 160, 74, 0.08),
+      transparent 28%
+    ),
+
+    var(--crystal-ivory);
+}
+
+
+.page-placeholder h1 {
+
+  font-family:
+    "Playfair Display",
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(40px, 6vw, 70px);
+
+  font-weight: 500;
+
+  color:
+    var(--crystal-charcoal);
+
+  letter-spacing:
+    -1px;
+}
+
+
+/* =========================================================
+   TEXT UTILITIES
+========================================================= */
+
+.gold-text {
+  color:
+    var(--crystal-gold-dark);
+}
+
+
+.champagne-text {
+  color:
+    var(--crystal-gold);
+}
+
+
+.muted-text {
+  color:
+    var(--crystal-muted);
+}
+
+
+.aqua-text {
+  color:
+    var(--crystal-aqua-dark);
+}
+
+
+/* =========================================================
+   GLOBAL DIVIDER
+========================================================= */
+
+.gold-divider {
+
+  width: 62px;
+
+  height: 2px;
+
+  margin:
+    20px auto;
+
+  border-radius:
+    10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--crystal-aqua),
+      var(--crystal-gold),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   PREMIUM AQUA DIVIDER
+========================================================= */
+
+.aqua-divider {
+
+  width: 55px;
+
+  height: 2px;
+
+  margin:
+    18px auto;
+
+  border-radius:
+    10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--crystal-aqua),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   COMMON WHITE CARD
+========================================================= */
+
+.crystal-card {
+
+  background:
+    var(--crystal-white);
+
+  border:
+    1px solid
+    var(--crystal-light-border);
+
+  border-radius:
+    var(--crystal-radius);
+
+  box-shadow:
+    var(--crystal-shadow-sm);
+
+  transition:
+    transform var(--crystal-transition),
+    box-shadow var(--crystal-transition),
+    border-color var(--crystal-transition);
+}
+
+
+.crystal-card:hover {
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    var(--crystal-border);
+
+  box-shadow:
+    var(--crystal-shadow);
+}
+
+
+/* =========================================================
+   SOFT SECTION
+========================================================= */
+
+.crystal-section-soft {
+
+  background:
+    var(--crystal-aqua-soft);
+}
+
+
+/* =========================================================
+   CREAM SECTION
+========================================================= */
+
+.crystal-section-cream {
+
+  background:
+    var(--crystal-cream);
+}
+
+
+/* =========================================================
+   WHITE SECTION
+========================================================= */
+
+.crystal-section-white {
+
+  background:
+    var(--crystal-white);
+}
+
+
+/* =========================================================
+   AQUA SECTION
+========================================================= */
+
+.crystal-section-aqua {
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-aqua-soft),
+      #ffffff
+    );
+}
+
+
+/* =========================================================
+   PREMIUM SECTION DECORATION
+========================================================= */
+
+.crystal-section-decoration {
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(112, 197, 194, 0.13);
+
+  pointer-events: none;
+}
+
+
+.crystal-section-decoration::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 24px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(201, 160, 74, 0.12);
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+
+  background:
+    var(--crystal-aqua);
+
+  color:
+    #ffffff;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+
+  width: 7px;
+}
+
+
+::-webkit-scrollbar-track {
+
+  background:
+    var(--crystal-cream);
+}
+
+
+::-webkit-scrollbar-thumb {
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--crystal-aqua),
+      var(--crystal-aqua-dark)
+    );
+
+  border-radius:
+    10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+  background:
+    var(--crystal-aqua-deep);
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+:focus-visible {
+
+  outline:
+    2px solid
+    var(--crystal-aqua-dark);
+
+  outline-offset:
+    3px;
+}
+
+
+/* =========================================================
+   BUTTON DEFAULT
+========================================================= */
+
+button {
+
+  border: 0;
+
+  background: none;
+}
+
+
+/* =========================================================
+   MOBILE TOUCH TARGET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  button,
+  a {
+
+    touch-action:
+      manipulation;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .home-section-heading {
+
+    margin-bottom:
+      60px;
+  }
+
+  .home-section-heading > p:last-child {
+
+    max-width:
+      620px;
+
+    font-size:
+      14px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  html {
+    scroll-behavior:
+      smooth;
+  }
+
+
+  body {
+
+    font-size:
+      14px;
+
+    overflow-x:
+      hidden;
+  }
+
+
+  /* -------------------------------------------------------
+     EYEBROW
+  ------------------------------------------------------- */
+
+  .section-eyebrow {
+
+    margin-bottom:
+      12px;
+
+    font-size:
+      9px;
+
+    letter-spacing:
+      2.8px;
+
+    line-height:
+      1.5;
+  }
+
+
+  .section-eyebrow::before {
+
+    width:
+      4px;
+
+    height:
+      4px;
+
+    margin-right:
+      7px;
+  }
+
+
+  /* -------------------------------------------------------
+     TITLE
+  ------------------------------------------------------- */
+
+  .section-title {
+
+    width:
+      100%;
+
+    max-width:
+      100%;
+
+    padding-bottom:
+      18px;
+
+    font-size:
+      clamp(32px, 9vw, 38px);
+
+    line-height:
+      1.12;
+
+    letter-spacing:
+      -0.5px;
+  }
+
+
+  .section-title::after {
+
+    width:
+      50px;
+
+    height:
+      2px;
+  }
+
+
+  /* -------------------------------------------------------
+     SECTION HEADING
+  ------------------------------------------------------- */
+
+  .home-section-heading {
+
+    max-width:
+      100%;
+
+    margin:
+      0 auto 50px;
+
+    padding:
+      0 16px;
+  }
+
+
+  .home-section-heading > p:last-child {
+
+    max-width:
+      100%;
+
+    margin-top:
+      18px;
+
+    font-size:
+      13px;
+
+    line-height:
+      1.75;
+  }
+
+
+  /* -------------------------------------------------------
+     WELCOME
+  ------------------------------------------------------- */
+
+  .home-welcome-content .section-title {
+
+    font-size:
+      clamp(32px, 9vw, 38px);
+  }
+
+
+  /* -------------------------------------------------------
+     WHY
+  ------------------------------------------------------- */
+
+  .home-why-content .section-title {
+
+    font-size:
+      clamp(32px, 9vw, 38px);
+  }
+
+
+  /* -------------------------------------------------------
+     FINAL CTA
+  ------------------------------------------------------- */
+
+  .home-final-content .section-title {
+
+    font-size:
+      clamp(34px, 10vw, 42px);
+  }
+
+
+  /* -------------------------------------------------------
+     COMMON CARD
+  ------------------------------------------------------- */
+
+  .crystal-card {
+
+    border-radius:
+      10px;
+
+    box-shadow:
+      0 8px 25px
+      rgba(45, 88, 87, 0.07);
+  }
+
+
+  .crystal-card:hover {
+
+    transform:
+      none;
+  }
+
+
+  /* -------------------------------------------------------
+     DIVIDERS
+  ------------------------------------------------------- */
+
+  .gold-divider {
+
+    width:
+      50px;
+
+    height:
+      2px;
+
+    margin:
+      16px auto;
+  }
+
+
+  .aqua-divider {
+
+    width:
+      45px;
+
+    height:
+      2px;
+
+    margin:
+      15px auto;
+  }
+
+
+  /* -------------------------------------------------------
+     DECORATION
+  ------------------------------------------------------- */
+
+  .crystal-section-decoration {
+
+    width:
+      140px;
+
+    height:
+      140px;
+
+    opacity:
+      0.7;
+  }
+
+
+  .crystal-section-decoration::before {
+
+    inset:
+      16px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .section-eyebrow {
+
+    font-size:
+      8.5px;
+
+    letter-spacing:
+      2.5px;
+  }
+
+
+  .section-title {
+
+    font-size:
+      32px;
+
+    line-height:
+      1.13;
+  }
+
+
+  .home-section-heading {
+
+    margin-bottom:
+      45px;
+
+    padding:
+      0 14px;
+  }
+
+
+  .home-section-heading > p:last-child {
+
+    margin-top:
+      17px;
+
+    font-size:
+      12.5px;
+
+    line-height:
+      1.7;
+  }
+
+
+  .home-welcome-content .section-title,
+  .home-why-content .section-title {
+
+    font-size:
+      33px;
+  }
+
+
+  .home-final-content .section-title {
+
+    font-size:
+      36px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE 390px
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .section-eyebrow {
+
+    margin-bottom:
+      10px;
+
+    font-size:
+      8px;
+
+    letter-spacing:
+      2.2px;
+  }
+
+
+  .section-title {
+
+    font-size:
+      30px;
+
+    line-height:
+      1.14;
+
+    padding-bottom:
+      16px;
+  }
+
+
+  .section-title::after {
+
+    width:
+      45px;
+  }
+
+
+  .home-section-heading {
+
+    margin-bottom:
+      40px;
+
+    padding:
+      0 12px;
+  }
+
+
+  .home-section-heading > p:last-child {
+
+    margin-top:
+      15px;
+
+    font-size:
+      12px;
+
+    line-height:
+      1.68;
+  }
+
+
+  .home-welcome-content .section-title,
+  .home-why-content .section-title {
+
+    font-size:
+      31px;
+  }
+
+
+  .home-final-content .section-title {
+
+    font-size:
+      34px;
+  }
+
+
+  .crystal-section-decoration {
+
+    width:
+      110px;
+
+    height:
+      110px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .section-eyebrow {
+
+    font-size:
+      7.5px;
+
+    letter-spacing:
+      2px;
+  }
+
+
+  .section-title {
+
+    font-size:
+      28px;
+
+    letter-spacing:
+      -0.3px;
+  }
+
+
+  .home-section-heading {
+
+    padding:
+      0 10px;
+
+    margin-bottom:
+      36px;
+  }
+
+
+  .home-section-heading > p:last-child {
+
+    font-size:
+      11.5px;
+
+    line-height:
+      1.65;
+  }
+
+
+  .home-welcome-content .section-title,
+  .home-why-content .section-title {
+
+    font-size:
+      29px;
+  }
+
+
+  .home-final-content .section-title {
+
+    font-size:
+      31px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 330px) {
+
+  .section-title {
+
+    font-size:
+      26px;
+  }
+
+
+  .section-eyebrow {
+
+    font-size:
+      7px;
+
+    letter-spacing:
+      1.8px;
+  }
+
+
+  .home-section-heading > p:last-child {
+
+    font-size:
+      11px;
+  }
+}
+
+
+/* =========================================================
+   SAFE AREA FOR MOBILE DEVICES
+========================================================= */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+
+  body {
+
+    padding-bottom:
+      env(safe-area-inset-bottom);
+  }
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (
+  max-width: 900px
+) and (
+  orientation: landscape
+) {
+
+  .home-section-heading {
+
+    margin-bottom:
+      40px;
+  }
+
+
+  .section-title {
+
+    font-size:
+      32px;
+  }
+
+
+  .home-section-heading > p:last-child {
+
+    font-size:
+      12px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+
+    scroll-behavior:
+      auto;
+  }
+
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    scroll-behavior:
+      auto !important;
+  }
+}

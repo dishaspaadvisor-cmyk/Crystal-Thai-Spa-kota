@@ -1,0 +1,1043 @@
+/* =========================================================
+   CRYSTAL THAI SPA
+   PREMIUM CRYSTAL LUXURY NAVBAR
+========================================================= */
+
+:root {
+  --crystal-ivory: #fbfaf6;
+  --crystal-white: #ffffff;
+
+  --crystal-gold: #c9a34e;
+  --crystal-gold-light: #e8cf8a;
+  --crystal-gold-dark: #98752c;
+
+  --crystal-aqua: #72c8c5;
+  --crystal-aqua-light: #dff4f1;
+  --crystal-aqua-dark: #438f8d;
+
+  --crystal-charcoal: #202326;
+  --crystal-text: #303437;
+  --crystal-muted: #777c7c;
+
+  --crystal-border: rgba(201, 163, 78, 0.25);
+}
+
+
+/* =========================================================
+   MAIN NAVBAR
+========================================================= */
+
+.crystal-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 92px;
+
+  z-index: 9999;
+
+  background: rgba(251, 250, 246, 0.96);
+
+  border-bottom: 1px solid
+    rgba(201, 163, 78, 0.22);
+
+  transition:
+    height 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+
+/* Scrolled */
+
+.crystal-navbar-scrolled {
+  height: 78px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  box-shadow:
+    0 10px 35px rgba(34, 39, 39, 0.08);
+}
+
+
+/* =========================================================
+   NAVBAR CONTAINER
+========================================================= */
+
+.crystal-navbar-container {
+  width: min(1500px, calc(100% - 70px));
+
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   LEFT NAVIGATION
+========================================================= */
+
+.crystal-nav-left {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: clamp(22px, 2.5vw, 42px);
+}
+
+
+/* =========================================================
+   RIGHT NAVIGATION
+========================================================= */
+
+.crystal-nav-right {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: clamp(18px, 2vw, 30px);
+}
+
+
+.crystal-nav-links-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: clamp(20px, 2vw, 34px);
+}
+
+
+/* =========================================================
+   NAVIGATION LINK
+========================================================= */
+
+.crystal-nav-link {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  height: 92px;
+
+  color: var(--crystal-text);
+
+  text-decoration: none;
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  letter-spacing: 1.1px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.crystal-navbar-scrolled .crystal-nav-link {
+  height: 78px;
+}
+
+
+/* =========================================================
+   GOLD + AQUA UNDERLINE
+========================================================= */
+
+.crystal-nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 25px;
+
+  width: 0;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--crystal-aqua),
+      var(--crystal-gold)
+    );
+
+  transform: translateX(-50%);
+
+  transition:
+    width 0.35s ease;
+}
+
+
+.crystal-nav-link:hover {
+  color: var(--crystal-gold-dark);
+
+  transform: translateY(-1px);
+}
+
+
+.crystal-nav-link:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.crystal-logo {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 330px;
+
+  height: 100%;
+
+  text-decoration: none;
+
+  z-index: 5;
+}
+
+
+.crystal-logo img {
+  display: block;
+
+  width: 100%;
+
+  max-width: 330px;
+
+  max-height: 76px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+
+.crystal-logo:hover img {
+  transform: scale(1.025);
+
+  filter:
+    drop-shadow(
+      0 5px 12px
+      rgba(201, 163, 78, 0.18)
+    );
+}
+
+
+/* =========================================================
+   BOOK APPOINTMENT BUTTON
+========================================================= */
+
+.crystal-book-btn {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-width: 170px;
+
+  height: 44px;
+
+  padding: 0 20px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-gold-dark),
+      var(--crystal-gold),
+      var(--crystal-gold-light),
+      var(--crystal-gold)
+    );
+
+  border: 1px solid
+    var(--crystal-gold);
+
+  text-decoration: none;
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+
+  border-radius: 2px;
+
+  box-shadow:
+    0 7px 20px
+    rgba(201, 163, 78, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.crystal-book-btn:hover {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-gold),
+      var(--crystal-gold-light),
+      var(--crystal-gold)
+    );
+
+  box-shadow:
+    0 12px 28px
+    rgba(201, 163, 78, 0.3);
+}
+
+
+/* Inner gold frame */
+
+.crystal-book-btn::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 3px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.3);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MOBILE TOGGLE
+========================================================= */
+
+.crystal-mobile-toggle {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  background: var(--crystal-white);
+
+  color: var(--crystal-charcoal);
+
+  border: 1px solid
+    var(--crystal-border);
+
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.crystal-mobile-toggle:hover,
+.crystal-mobile-toggle.active {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-gold-dark),
+      var(--crystal-gold)
+    );
+
+  border-color: var(--crystal-gold);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.crystal-mobile-menu {
+  position: fixed;
+
+  top: 92px;
+
+  right: 18px;
+  left: 18px;
+
+  max-height:
+    calc(100vh - 110px);
+
+  overflow-y: auto;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f8f7f1
+    );
+
+  border:
+    1px solid
+    rgba(201, 163, 78, 0.25);
+
+  border-radius: 5px;
+
+  box-shadow:
+    0 30px 70px
+    rgba(25, 30, 30, 0.18);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform:
+    translateY(-15px)
+    scale(0.98);
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+
+  z-index: 10000;
+}
+
+
+.crystal-mobile-menu.open {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+
+/* =========================================================
+   MOBILE INNER
+========================================================= */
+
+.crystal-mobile-inner {
+  padding: 25px 22px 22px;
+}
+
+
+/* =========================================================
+   MOBILE LOGO
+========================================================= */
+
+.crystal-mobile-logo {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px 0 18px;
+}
+
+
+.crystal-mobile-logo img {
+  display: block;
+
+  width: 235px;
+
+  max-width: 82%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   DECORATIVE DIVIDER
+========================================================= */
+
+.crystal-mobile-divider {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-bottom: 10px;
+}
+
+
+.crystal-mobile-divider span {
+  width: 60px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--crystal-gold)
+    );
+}
+
+
+.crystal-mobile-divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      var(--crystal-gold),
+      transparent
+    );
+}
+
+
+.crystal-mobile-divider i {
+  display: block;
+
+  width: 6px;
+  height: 6px;
+
+  background: var(--crystal-aqua);
+
+  border:
+    1px solid
+    var(--crystal-gold);
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   MOBILE LINKS
+========================================================= */
+
+.crystal-mobile-links {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.crystal-mobile-link {
+  display: grid;
+
+  grid-template-columns: 38px 1fr 30px;
+
+  align-items: center;
+
+  min-height: 54px;
+
+  color: var(--crystal-text);
+
+  text-decoration: none;
+
+  border-bottom:
+    1px solid
+    rgba(201, 163, 78, 0.13);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.25s ease,
+    padding-left 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.crystal-mobile-link:hover {
+  color: var(--crystal-gold-dark);
+
+  padding-left: 7px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(114, 200, 197, 0.08),
+      transparent
+    );
+}
+
+
+/* Number */
+
+.mobile-link-number {
+  color: var(--crystal-gold);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+
+/* Arrow */
+
+.mobile-link-arrow {
+  color: var(--crystal-aqua);
+
+  font-size: 17px;
+
+  text-align: right;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.crystal-mobile-link:hover
+.mobile-link-arrow {
+  transform: translateX(4px);
+
+  color: var(--crystal-gold);
+}
+
+
+/* =========================================================
+   MOBILE ACTIONS
+========================================================= */
+
+.crystal-mobile-actions {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+
+.crystal-mobile-call,
+.crystal-mobile-book {
+  min-height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  text-decoration: none;
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+
+  border-radius: 2px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.crystal-mobile-call {
+  color: var(--crystal-charcoal);
+
+  background:
+    var(--crystal-aqua-light);
+
+  border:
+    1px solid
+    rgba(114, 200, 197, 0.45);
+}
+
+
+.crystal-mobile-book {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--crystal-gold-dark),
+      var(--crystal-gold),
+      var(--crystal-gold-light)
+    );
+
+  border:
+    1px solid
+    var(--crystal-gold);
+}
+
+
+.crystal-mobile-call:hover,
+.crystal-mobile-book:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(35, 40, 40, 0.12);
+}
+
+
+/* =========================================================
+   MOBILE TAGLINE
+========================================================= */
+
+.crystal-mobile-tagline {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 21px;
+
+  color: var(--crystal-muted);
+
+  font-family:
+    "Poppins",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+}
+
+
+.crystal-mobile-tagline b {
+  color: var(--crystal-gold);
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.crystal-menu-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    rgba(24, 28, 28, 0.35);
+
+  backdrop-filter: blur(3px);
+
+  -webkit-backdrop-filter: blur(3px);
+
+  z-index: 9998;
+
+  animation:
+    crystalOverlayIn 0.25s ease;
+}
+
+
+@keyframes crystalOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .crystal-navbar-container {
+    width: min(
+      100% - 40px,
+      1150px
+    );
+  }
+
+  .crystal-logo {
+    width: 280px;
+  }
+
+  .crystal-logo img {
+    max-width: 280px;
+  }
+
+  .crystal-nav-left {
+    gap: 20px;
+  }
+
+  .crystal-nav-links-right {
+    gap: 20px;
+  }
+
+  .crystal-nav-link {
+    font-size: 11px;
+  }
+
+  .crystal-book-btn {
+    min-width: 145px;
+
+    padding: 0 15px;
+
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .crystal-navbar {
+    height: 82px;
+  }
+
+  .crystal-navbar-scrolled {
+    height: 74px;
+  }
+
+  .crystal-navbar-container {
+    width: calc(100% - 36px);
+
+    display: flex;
+
+    justify-content: space-between;
+  }
+
+  .crystal-nav-left,
+  .crystal-nav-right {
+    display: none;
+  }
+
+  .crystal-logo {
+    width: 255px;
+
+    justify-content: flex-start;
+  }
+
+  .crystal-logo img {
+    width: 255px;
+
+    max-width: 100%;
+
+    max-height: 68px;
+  }
+
+  .crystal-mobile-toggle {
+    display: flex;
+  }
+
+  .crystal-mobile-menu {
+    top: 82px;
+  }
+
+  .crystal-navbar-scrolled
+  + .crystal-mobile-menu {
+    top: 74px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .crystal-navbar {
+    height: 72px;
+  }
+
+  .crystal-navbar-scrolled {
+    height: 68px;
+  }
+
+  .crystal-navbar-container {
+    width: calc(100% - 28px);
+  }
+
+  .crystal-logo {
+    width: 210px;
+  }
+
+  .crystal-logo img {
+    width: 210px;
+
+    max-height: 58px;
+  }
+
+  .crystal-mobile-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .crystal-mobile-menu {
+    top: 72px;
+
+    left: 10px;
+    right: 10px;
+
+    max-height:
+      calc(100vh - 85px);
+  }
+
+  .crystal-mobile-inner {
+    padding: 21px 17px 18px;
+  }
+
+  .crystal-mobile-logo img {
+    width: 215px;
+  }
+
+  .crystal-mobile-link {
+    min-height: 51px;
+
+    font-size: 12px;
+  }
+
+  .crystal-mobile-actions {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .crystal-mobile-call,
+  .crystal-mobile-book {
+    min-height: 46px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .crystal-navbar {
+    height: 66px;
+  }
+
+  .crystal-logo {
+    width: 185px;
+  }
+
+  .crystal-logo img {
+    width: 185px;
+  }
+
+  .crystal-mobile-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .crystal-mobile-menu {
+    top: 66px;
+
+    left: 7px;
+    right: 7px;
+  }
+
+  .crystal-mobile-logo img {
+    width: 195px;
+  }
+
+  .crystal-mobile-inner {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .crystal-navbar,
+  .crystal-logo img,
+  .crystal-nav-link,
+  .crystal-book-btn,
+  .crystal-mobile-menu,
+  .crystal-mobile-link {
+    transition: none;
+  }
+}
